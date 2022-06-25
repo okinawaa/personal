@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { appWithTranslation } from "next-i18next";
 import theme from "~/styles/theme.style";
 import "../styles/font-face.css";
+import MainLayout from "~/layouts/MainLayout";
 // import "../locales/i18n";
 // import { useEffect } from "react";
 // import i18next from "i18next";
@@ -17,9 +18,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   // }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <MainLayout>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </MainLayout>
   );
 }
 
