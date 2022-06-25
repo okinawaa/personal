@@ -11,7 +11,7 @@ declare module "react-i18next" {
     // defaultNS: "main";
     // custom resources type
     resources: {
-      home: typeof ko.home;
+      main: typeof ko.main;
     };
   }
 }

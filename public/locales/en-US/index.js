@@ -1,4 +1,4 @@
-import home from "./home.json";
+import main from "./main.json";
 import common from "./common.json";
 
-export { home, common };
+export { main, common };
