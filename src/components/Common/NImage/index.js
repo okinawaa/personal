@@ -1,3 +1,3 @@
-import NImage from "./NImage";
+import PImage from "./PImage";
 
-export default NImage;
+export default PImage;

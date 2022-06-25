@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { media } from "~/constants/Media";
 import { pxToRem } from "~/constants/Size";
 
-interface NButtonPropsType {
+interface PButtonPropsType {
   width: number;
   height: number;
   filled: boolean;
@@ -14,7 +14,7 @@ interface NButtonPropsType {
   moHeight?: number;
 }
 
-export const Container = styled.button<NButtonPropsType>`
+export const Container = styled.button<PButtonPropsType>`
   display: flex;
   justify-content: center;
   align-items: center;

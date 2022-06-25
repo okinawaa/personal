@@ -1,8 +1,8 @@
-import Image, { ImageProps, StaticImageData } from "next/image";
+import Image, { ImageProps } from "next/image";
 import { useMemo } from "react";
-import * as Styled from "./NImage.style";
+import * as Styled from "./PImage.style";
 
-interface NImageProps {
+interface PImageProps {
   width?: number;
   height?: number;
   src: string | StaticImageData;
@@ -31,7 +31,7 @@ interface NImageProps {
   };
 }
 
-const NImage = ({
+const PImage = ({
   width,
   height,
   src,
@@ -47,7 +47,7 @@ const NImage = ({
   position,
   zIndex,
   shadow
-}: NImageProps) => {
+}: PImageProps) => {
   // type 은 next/image 에서 가져왔습니다.
   const ImageProps: ImageProps = useMemo(() => {
     return {
@@ -85,4 +85,4 @@ const NImage = ({
   );
 };
 
-export default NImage;
+export default PImage;

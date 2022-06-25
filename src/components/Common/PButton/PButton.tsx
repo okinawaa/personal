@@ -1,5 +1,5 @@
 import React from "react";
-import * as Styled from "./NButton.style";
+import * as Styled from "./PButton.style";
 
 interface NButtonPropsType {
   children: React.ReactElement;
@@ -16,7 +16,7 @@ interface NButtonPropsType {
   moWidth?: number;
   moHeight?: number;
 }
-const NButton = ({
+const PButton = ({
   children,
   width,
   height,
@@ -53,4 +53,4 @@ const NButton = ({
   );
 };
 
-export default NButton;
+export default PButton;
