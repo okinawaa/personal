@@ -53,12 +53,7 @@ const PImage = ({
     return {
       src,
       quality: quality || 100,
-      placeholder: "blur",
-      objectFit: objectFit || "contain",
-      blurDataURL:
-        typeof src === "string"
-          ? "https://user-images.githubusercontent.com/57122180/170612624-d289b783-46d6-4d4b-b3a0-9f490a1ccd7a.png"
-          : undefined
+      objectFit: objectFit || "contain"
     };
   }, [objectFit, quality, src]);
 

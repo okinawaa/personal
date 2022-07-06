@@ -18,12 +18,33 @@ export const SizedBox = styled.div<{
   }
 `;
 
+export const SizedCircle = styled(SizedBox)<{
+  background?: string;
+  position?: Common.positionType;
+  offset?: Common.offsetType;
+}>`
+  position: ${({ position }) => position || "static"};
+  ${({ offset }) =>
+    offset?.top !== undefined && `top : ${pxToRem(offset.top)};`}
+  ${({ offset }) =>
+    offset?.right !== undefined && `right : ${pxToRem(offset.right)};`}
+  ${({ offset }) =>
+    offset?.bottom !== undefined && `bottom : ${pxToRem(offset.bottom)};`}
+  ${({ offset }) =>
+    offset?.left !== undefined && `left : ${pxToRem(offset.left)};`}
+
+  background: ${({ background }) =>
+    background && background.length > 0 ? background : "transparent"};
+
+  border-radius: 50%;
+`;
+
 export const FlexBox = styled.div<{
   direction?: string;
   alignItems?: string;
   gap?: number;
   bgColor?: string;
-  position?: "relative" | "absolute" | "fixed";
+  position?: Common.positionType;
   moGap?: number;
 }>`
   position: ${({ position }) => position || "static"};
