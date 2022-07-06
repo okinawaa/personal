@@ -68,7 +68,7 @@
   font-display: swap;
 }
 
-html[lang="ko"] span,
+html[lang="ko-KR"] span,
 div,
 p,
 h1,
@@ -81,7 +81,7 @@ a {
   font-family: NotoSansKR !important;
 }
 
-html[lang="en"] span,
+html[lang="en-US"] span,
 div,
 p,
 h1,
