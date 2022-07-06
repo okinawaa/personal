@@ -40,7 +40,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    will-change: overflow-y, position;
+    will-change:  position;
   }
 
   html {
