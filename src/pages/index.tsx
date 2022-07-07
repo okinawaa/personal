@@ -9,7 +9,7 @@ import PImage from "~/components/Common/NImage/PImage";
 import Colors from "~/constants/Colors";
 import { FlexBox, SizedBox } from "~/constants/Common.style";
 import { Header1, Header2 } from "~/constants/Typography";
-import { BOLD_WEIGHT } from "~/constants/Variables";
+import { BOLD_WEIGHT, MAIN_PADDING_TOP } from "~/constants/Variables";
 import useScroll from "~/hooks/useScroll";
 
 const Main: NextPage = () => {
@@ -41,7 +41,10 @@ const Main: NextPage = () => {
           gap={20}
           position="sticky"
           offset={{
-            top: y < breakPoint(1) ? 180 : 180 - (y - breakPoint(1))
+            top:
+              y < breakPoint(1)
+                ? MAIN_PADDING_TOP
+                : MAIN_PADDING_TOP - (y - breakPoint(1))
           }}
         >
           <Header2>안녕하세요</Header2>
@@ -71,7 +74,10 @@ const Main: NextPage = () => {
           position="sticky"
           direction="column"
           offset={{
-            top: y < breakPoint(2) ? 180 : 180 - (y - breakPoint(2))
+            top:
+              y < breakPoint(2)
+                ? MAIN_PADDING_TOP
+                : MAIN_PADDING_TOP - (y - breakPoint(2))
           }}
         >
           <Header1
@@ -100,7 +106,10 @@ const Main: NextPage = () => {
           position="sticky"
           direction="column"
           offset={{
-            top: y < breakPoint(3) ? 180 : 180 - (y - breakPoint(3))
+            top:
+              y < breakPoint(3)
+                ? MAIN_PADDING_TOP
+                : MAIN_PADDING_TOP - (y - breakPoint(3))
           }}
         >
           <Header2>자바스크립트 생태계에 빠져있으며</Header2>

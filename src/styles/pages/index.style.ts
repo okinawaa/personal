@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Colors from "~/constants/Colors";
 import { FlexBox } from "~/constants/Common.style";
 import { pxToRem } from "~/constants/Size";
+import { MAIN_PADDING_TOP } from "~/constants/Variables";
 
 export const Container = styled(FlexBox)`
   background-color: ${Colors.black};
@@ -12,7 +13,8 @@ export const ImageWrapper = styled.div`
 `;
 
 export const ContentWrapper = styled(FlexBox)`
-  padding: ${pxToRem(180)} ${pxToRem(180)} ${pxToRem(180)} ${pxToRem(640)};
+  padding: ${pxToRem(MAIN_PADDING_TOP)} ${pxToRem(MAIN_PADDING_TOP)}
+    ${pxToRem(MAIN_PADDING_TOP)} ${pxToRem(640)};
   height: ${pxToRem(6000)};
 `;
 

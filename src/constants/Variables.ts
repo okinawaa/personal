@@ -14,3 +14,5 @@ export const XD_MOBILE_WIDTH = 384;
 export const BOLD_WEIGHT = 700;
 
 export const ROOT_FONT_SIZE = 10;
+
+export const MAIN_PADDING_TOP = 180;
