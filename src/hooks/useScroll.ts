@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { debounce } from "lodash";
+import { useEffect, useState } from "react";
 import { XD_DESKTOP_WIDTH } from "~/constants/Variables";
 
 const useScroll = () => {

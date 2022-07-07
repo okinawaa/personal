@@ -1,6 +1,12 @@
 import React, { useRef, useEffect, useCallback, useMemo } from "react";
+import useScroll from "./useScroll";
 
 const useScrollFadeIn = (
+  hide?: {
+    finish: number; // when trigger nomarlized scrollY attach this point
+    transform?: string;
+    opacity?: number;
+  },
   direction: AnimationDirectionType = "up",
   duration = 1,
   delay = 0
@@ -17,6 +23,9 @@ const useScrollFadeIn = (
     }),
     []
   );
+  const {
+    state: { y }
+  } = useScroll();
 
   const handleScroll = useCallback(
     ([entry]) => {
@@ -34,9 +43,14 @@ const useScrollFadeIn = (
           current.style.opacity = "0";
           current.style.transform = `${handleDirection[direction]}`;
         }
+        // hide element
+        if (hide && y === hide.finish) {
+          current.style.transform = `${hide.transform}`;
+          current.style.opacity = `${hide.opacity}`;
+        }
       }
     },
-    [delay, direction, duration, handleDirection]
+    [delay, direction, duration, handleDirection, hide, y]
   );
 
   useEffect(() => {

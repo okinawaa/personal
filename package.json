@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "framer-motion": "^6.4.2",
     "lodash": "^4.17.21",
     "next": "12.1.0",
     "next-i18next": "^10.5.0",
