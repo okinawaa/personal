@@ -20,7 +20,12 @@ const SkillItem = ({ spec, proficiency }: Skill.SkillType) => {
     return Colors.yellowff;
   }, [animatedProficiency]);
   return (
-    <Styled.Container {...animation} direction="column" gap={30}>
+    <Styled.Container
+      {...animation}
+      direction="column"
+      gap={30}
+      title={`${spec.alt} 구현 능력에 대해 자세히 살펴보기`}
+    >
       <PImage {...spec} width={200} height={200} borderRadius={20} />
       <Header1 color={proficiencyColor}>{animatedProficiency}</Header1>
     </Styled.Container>
