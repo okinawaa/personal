@@ -18,7 +18,7 @@ const SkillChunk = ({ category, skills }: SkillChunkProps) => {
           <Header2 color={Colors.redf9}>{category}</Header2>
         </Styled.CategoryWrapper>
         {skills.map(skill => (
-          <SkillItem {...skill} />
+          <SkillItem {...skill} key={skill.id} />
         ))}
       </Styled.Container>
     </>

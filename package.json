@@ -10,6 +10,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "react-redux": "^8.0.1",
+    "@reduxjs/toolkit": "^1.8.1",
     "framer-motion": "^6.4.2",
     "lodash": "^4.17.21",
     "next": "12.1.0",
