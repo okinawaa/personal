@@ -6,7 +6,7 @@ import { pxToRem } from "~/constants/Size";
 export const Container = styled.main`
   background-color: ${Colors.brown2b};
   width: 100%;
-  height: 500vh;
+  height: 600vh;
 `;
 
 export const ContentsWrapper = styled(FlexBox)`

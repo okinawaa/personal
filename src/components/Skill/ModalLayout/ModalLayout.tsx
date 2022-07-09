@@ -10,9 +10,17 @@ interface ModalLayoutProps {
   title: string;
   checkedList: string[];
   description: string;
+  proficiency: number;
+  proficiencyColor: string;
 }
 
-const ModalLayout = ({ title, checkedList, description }: ModalLayoutProps) => {
+const ModalLayout = ({
+  title,
+  checkedList,
+  description,
+  proficiency,
+  proficiencyColor
+}: ModalLayoutProps) => {
   const dispatch = useAppDispatch();
   return (
     <Styled.Container direction="column">
@@ -39,10 +47,13 @@ const ModalLayout = ({ title, checkedList, description }: ModalLayoutProps) => {
             </Styled.CheckedListItem>
           ))}
         </Styled.CheckedListWrapper>
-        <FlexBox gap={6}>
-          <Subtitle2>내가 생각하는 </Subtitle2>
+        <FlexBox>
           <Subtitle2 color={Colors.redf9}>{title}</Subtitle2>
-          <Subtitle2>을 잘한다는 것은?</Subtitle2>
+          <SizedBox width={6} />
+          <Subtitle2>에</Subtitle2>
+          <SizedBox width={6} />
+          <Subtitle2 color={proficiencyColor}>{proficiency}</Subtitle2>
+          <Subtitle2>점을 부여한 근거 및 이유</Subtitle2>
         </FlexBox>
         <SizedBox height={10} />
         <Styled.DescriptionWrapper>

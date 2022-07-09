@@ -4,6 +4,7 @@ const skillList: {
   front: Skill.SkillType[];
   back: Skill.SkillType[];
   devOps: Skill.SkillType[];
+  etc: Skill.SkillType[];
 } = {
   front: [
     {
@@ -49,14 +50,102 @@ const skillList: {
       checkedList: ["마크업", "시멘틱", "구조"],
       description:
         "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    },
+    {
+      id: "react",
+      spec: {
+        src: Images.react,
+        alt: "react"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    },
+    {
+      id: "react-native",
+      spec: {
+        src: Images.reactNative,
+        alt: "react-native"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    },
+    {
+      id: "NextJs",
+      spec: {
+        src: Images.nextJs,
+        alt: "NextJs"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    },
+    {
+      id: "webpack",
+      spec: {
+        src: Images.webpack,
+        alt: "webpack"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    },
+    {
+      id: "redux",
+      spec: {
+        src: Images.redux,
+        alt: "redux"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    },
+    {
+      id: "react-query",
+      spec: {
+        src: Images.reactQuery,
+        alt: "react-query"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    },
+    {
+      id: "styled-components",
+      spec: {
+        src: Images.styledComponents,
+        alt: "styled-components"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    },
+    {
+      id: "react-testing-library",
+      spec: {
+        src: Images.reactTestingLibrary,
+        alt: "styled-components"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     }
   ],
   back: [
     {
-      id: "html5",
+      id: "django",
       spec: {
-        src: Images.html5,
-        alt: "html5"
+        src: Images.django,
+        alt: "django"
       },
       proficiency: 85,
       checkedList: ["마크업", "시멘틱", "구조"],
@@ -64,10 +153,10 @@ const skillList: {
         "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
-      id: "css",
+      id: "nodejs",
       spec: {
-        src: Images.css,
-        alt: "css"
+        src: Images.nodejs,
+        alt: "nodejs"
       },
       proficiency: 70,
       checkedList: ["마크업", "시멘틱", "구조"],
@@ -75,10 +164,10 @@ const skillList: {
         "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
-      id: "js",
+      id: "firebase",
       spec: {
-        src: Images.js,
-        alt: "js"
+        src: Images.firebase,
+        alt: "firebase"
       },
       proficiency: 75,
       checkedList: ["마크업", "시멘틱", "구조"],
@@ -86,10 +175,10 @@ const skillList: {
         "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
-      id: "ts",
+      id: "mysql",
       spec: {
-        src: Images.ts,
-        alt: "ts"
+        src: Images.mysql,
+        alt: "mysql"
       },
       proficiency: 90,
       checkedList: ["마크업", "시멘틱", "구조"],
@@ -99,10 +188,10 @@ const skillList: {
   ],
   devOps: [
     {
-      id: "html5",
+      id: "aws",
       spec: {
-        src: Images.html5,
-        alt: "html5"
+        src: Images.aws,
+        alt: "aws"
       },
       proficiency: 85,
       checkedList: ["마크업", "시멘틱", "구조"],
@@ -110,10 +199,10 @@ const skillList: {
         "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
-      id: "css",
+      id: "docker",
       spec: {
-        src: Images.css,
-        alt: "css"
+        src: Images.docker,
+        alt: "docker"
       },
       proficiency: 70,
       checkedList: ["마크업", "시멘틱", "구조"],
@@ -121,10 +210,10 @@ const skillList: {
         "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
-      id: "js",
+      id: "jenkins",
       spec: {
-        src: Images.js,
-        alt: "js"
+        src: Images.jenkins,
+        alt: "jenkins"
       },
       proficiency: 75,
       checkedList: ["마크업", "시멘틱", "구조"],
@@ -132,10 +221,23 @@ const skillList: {
         "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
-      id: "ts",
+      id: "git",
       spec: {
-        src: Images.ts,
-        alt: "ts"
+        src: Images.git,
+        alt: "git"
+      },
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
+    }
+  ],
+  etc: [
+    {
+      id: "vscode",
+      spec: {
+        src: Images.vscode,
+        alt: "vscode"
       },
       proficiency: 90,
       checkedList: ["마크업", "시멘틱", "구조"],

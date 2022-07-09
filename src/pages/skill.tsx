@@ -18,6 +18,7 @@ const Skill = () => {
         <SkillChunk category="front" skills={skillList.front} />
         <SkillChunk category="back" skills={skillList.back} />
         <SkillChunk category="devOps" skills={skillList.devOps} />
+        <SkillChunk category="etc" skills={skillList.etc} />
       </Styled.ContentsWrapper>
     </Styled.Container>
   );

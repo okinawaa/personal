@@ -14,7 +14,7 @@ declare module Common {
 }
 
 declare module Skill {
-  type categoryType = "front" | "back" | "devOps";
+  type categoryType = "front" | "back" | "devOps" | "etc";
   interface SkillType {
     id: string;
     spec: Common.imageSpecType;

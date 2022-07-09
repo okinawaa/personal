@@ -37,6 +37,8 @@ const SkillItem = ({
           title={id}
           checkedList={checkedList}
           description={description}
+          proficiency={proficiency}
+          proficiencyColor={proficiencyColor}
         />
       )
     );
