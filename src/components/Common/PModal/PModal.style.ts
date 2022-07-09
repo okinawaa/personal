@@ -11,7 +11,6 @@ export const Container = styled.div<{ show: boolean }>`
   right: 0;
   bottom: 0;
   z-index: ${zIndex.modal};
-
   display: ${({ show }) => (show ? "flex" : "none")};
   ${({ show }) =>
     show &&
@@ -19,6 +18,18 @@ export const Container = styled.div<{ show: boolean }>`
   align-items: center;`}
 
   background-color: ${Colors.dimColor(0.4)};
+
+  @keyframes PModalShow {
+    0% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  animation: PModalShow 0.1s ease-in-out;
 `;
 
 export const CloseButtonWrapper = styled.button`

@@ -19,5 +19,7 @@ declare module Skill {
     id: string;
     spec: Common.imageSpecType;
     proficiency: number;
+    checkedList: string[];
+    description: string;
   }
 }

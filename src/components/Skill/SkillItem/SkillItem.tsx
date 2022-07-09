@@ -4,9 +4,19 @@ import Colors from "~/constants/Colors";
 import { Header1 } from "~/constants/Typography";
 import useCountUp from "~/hooks/useCountUp";
 import useScrollFadeIn from "~/hooks/useScrollFadeIn";
+import { setModal } from "~/store/ducks/root/rootSlice";
+import { useAppDispatch } from "~/store/hooks";
+import ModalLayout from "../ModalLayout/ModalLayout";
 import * as Styled from "./SkillItem.style";
 
-const SkillItem = ({ spec, proficiency }: Skill.SkillType) => {
+const SkillItem = ({
+  id,
+  spec,
+  proficiency,
+  checkedList,
+  description
+}: Skill.SkillType) => {
+  const dispatch = useAppDispatch();
   const animation = useScrollFadeIn();
   const animatedProficiency = useCountUp(proficiency);
 
@@ -19,12 +29,26 @@ const SkillItem = ({ spec, proficiency }: Skill.SkillType) => {
     }
     return Colors.yellowff;
   }, [animatedProficiency]);
+
+  const onClickHandler = () => {
+    dispatch(
+      setModal(
+        <ModalLayout
+          title={id}
+          checkedList={checkedList}
+          description={description}
+        />
+      )
+    );
+  };
+
   return (
     <Styled.Container
       {...animation}
       direction="column"
       gap={30}
       title={`${spec.alt} 구현 능력에 대해 자세히 살펴보기`}
+      onClick={onClickHandler}
     >
       <PImage {...spec} width={200} height={200} borderRadius={20} />
       <Header1 color={proficiencyColor}>{animatedProficiency}</Header1>

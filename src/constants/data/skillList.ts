@@ -12,7 +12,10 @@ const skillList: {
         src: Images.html5,
         alt: "html5"
       },
-      proficiency: 85
+      proficiency: 85,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "css",
@@ -20,7 +23,10 @@ const skillList: {
         src: Images.css,
         alt: "css"
       },
-      proficiency: 70
+      proficiency: 70,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "js",
@@ -28,7 +34,10 @@ const skillList: {
         src: Images.js,
         alt: "js"
       },
-      proficiency: 75
+      proficiency: 75,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "ts",
@@ -36,7 +45,10 @@ const skillList: {
         src: Images.ts,
         alt: "ts"
       },
-      proficiency: 90
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     }
   ],
   back: [
@@ -46,7 +58,10 @@ const skillList: {
         src: Images.html5,
         alt: "html5"
       },
-      proficiency: 85
+      proficiency: 85,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "css",
@@ -54,7 +69,10 @@ const skillList: {
         src: Images.css,
         alt: "css"
       },
-      proficiency: 70
+      proficiency: 70,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "js",
@@ -62,7 +80,10 @@ const skillList: {
         src: Images.js,
         alt: "js"
       },
-      proficiency: 75
+      proficiency: 75,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "ts",
@@ -70,7 +91,10 @@ const skillList: {
         src: Images.ts,
         alt: "ts"
       },
-      proficiency: 90
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     }
   ],
   devOps: [
@@ -80,7 +104,10 @@ const skillList: {
         src: Images.html5,
         alt: "html5"
       },
-      proficiency: 85
+      proficiency: 85,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "css",
@@ -88,7 +115,10 @@ const skillList: {
         src: Images.css,
         alt: "css"
       },
-      proficiency: 70
+      proficiency: 70,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "js",
@@ -96,7 +126,10 @@ const skillList: {
         src: Images.js,
         alt: "js"
       },
-      proficiency: 75
+      proficiency: 75,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     },
     {
       id: "ts",
@@ -104,7 +137,10 @@ const skillList: {
         src: Images.ts,
         alt: "ts"
       },
-      proficiency: 90
+      proficiency: 90,
+      checkedList: ["마크업", "시멘틱", "구조"],
+      description:
+        "개잘합니다.ㅁㄴㅇ.ㅁㅇ.ㅁㄴ.ㅇㅁㄴ.ㅇㅁ.ㅇㅁ.ㅇㅁㄴ.ㅇㅁ.ㅇ.ㅁㄴㅇㄴㅁ.ㅇ.ㅁㄴㅇ.ㅁ"
     }
   ]
 };
