@@ -1,6 +1,7 @@
 import * as Images from "@images/main";
 import { motion } from "framer-motion";
-import { useCallback } from "react";
+import { useRouter } from "next/router";
+import { useCallback, useEffect } from "react";
 import PImage from "~/components/Common/PImage";
 import Colors from "~/constants/Colors";
 import { FlexBox, SizedCircle } from "~/constants/Common.style";
@@ -16,14 +17,7 @@ import useScrollFadeIn from "~/hooks/useScrollFadeIn";
 import * as Styled from "./MainContentSection.style";
 
 const MainContentSection = () => {
-  const profileAnimation = useScrollFadeIn(
-    {
-      finish: 5000,
-      transform: `translate3d(100vw,0,0)`
-    },
-    "right"
-  );
-
+  const router = useRouter();
   const {
     state: { y }
   } = useScroll();
@@ -31,7 +25,24 @@ const MainContentSection = () => {
   const breakPoint = useCallback((order: number) => {
     return MAIN_CONTENTS_GAP * order + 250 * (order - 1);
   }, []);
+
+  const profileAnimation = useScrollFadeIn(
+    {
+      finish: 5000,
+      opacity: 0
+    },
+    "right"
+  );
+
   const rightBottomCircleAnimation = useScaleControl(0.6, 1.5, 0.6);
+
+  useEffect(() => {
+    if (y >= 5000) {
+      setTimeout(() => {
+        router.push("/skill");
+      }, 1000);
+    }
+  }, [router, y]);
 
   return (
     <>
