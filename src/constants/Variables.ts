@@ -17,3 +17,11 @@ export const ROOT_FONT_SIZE = 10;
 
 export const MAIN_PADDING_TOP = 180;
 export const MAIN_CONTENTS_GAP = 1000;
+
+export const zIndex = {
+  one: 1, // 한 단계 올라가야 될 때 쓰는 용도
+
+  nav: 4,
+  indicator: 4,
+  modal: 6
+};

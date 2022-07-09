@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import PModal from "~/components/Common/PModal/PModal";
+import { useAppSelector } from "~/store/hooks";
 import { GlobalStyle } from "~/styles/Global.style";
 
 interface MainLayoutProps {
@@ -17,11 +19,14 @@ const GrainBackGround = styled.div`
 `;
 
 const MainLayout = (props: MainLayoutProps) => {
+  const { showModal, modalChildren } = useAppSelector(({ root }) => root);
+
   return (
     <>
       <GrainBackGround />
       <GlobalStyle />
       {props.children}
+      {showModal && <PModal>{modalChildren}</PModal>}
     </>
   );
 };

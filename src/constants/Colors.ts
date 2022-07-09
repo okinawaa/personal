@@ -13,7 +13,8 @@ const Colors = {
   purpleAd: "#ada3c4",
 
   brown2b: "#2b2626",
-  black: "#000"
+  black: "#000",
+  dimColor: (opacity: number) => `rgba(0,0,0,${opacity})`
 };
 
 export default Colors;
