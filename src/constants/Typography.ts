@@ -183,7 +183,18 @@ export const Header1 = styled(Text)`
   line-height: ${pxToRem(70)};
 `;
 
-// 타이틀 2 ~ 1
+// 타이틀 3 ~ 1
+
+/**
+ * 타이틀 3
+ * @size 66px
+ * @height 76px;
+ * @weight 400
+ */
+export const Title3 = styled(Text)`
+  font-size: ${pxToRem(66)};
+  line-height: ${pxToRem(76)};
+`;
 
 /**
  * 타이틀 2

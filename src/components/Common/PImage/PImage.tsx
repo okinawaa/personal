@@ -29,6 +29,7 @@ interface PImageProps {
     value: string;
     borderRadius: number;
   };
+  borderRadius?: number;
 }
 
 const PImage = ({
@@ -46,7 +47,8 @@ const PImage = ({
   as,
   position,
   zIndex,
-  shadow
+  shadow,
+  borderRadius
 }: PImageProps) => {
   // type 은 next/image 에서 가져왔습니다.
   const ImageProps: ImageProps = useMemo(() => {
@@ -69,6 +71,7 @@ const PImage = ({
       as={as}
       position={position}
       zIndex={zIndex}
+      borderRadius={borderRadius}
     >
       {width && height ? (
         <Image {...ImageProps} layout="fill" alt={alt} />

@@ -20,6 +20,7 @@ export const Container = styled.div<{
     };
   };
   zIndex?: number;
+  borderRadius?: number;
 }>`
   /* 이 요소가 있어야 액자 형식으로 100% 채우는 게 가능합니다. */
   position: ${({ position }) => (position ? position.type : "relative")};
@@ -36,6 +37,8 @@ export const Container = styled.div<{
   height: ${({ height }) => (height ? pxToRem(height) : "auto")};
   ${({ center }) => center && `margin: 0 auto;`}
   ${({ zIndex }) => zIndex && `z-index: ${zIndex};`}
+  ${({ borderRadius }) =>
+    borderRadius && `border-radius: ${pxToRem(borderRadius)}; overflow:hidden;`}
 
   ${({ position }) =>
     position?.offset.top && `top : ${pxToRem(position.offset.top)};`}

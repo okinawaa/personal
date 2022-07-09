@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Colors from "./Colors";
 import { media } from "./Media";
 import { pxToRem } from "./Size";
 
@@ -81,4 +82,24 @@ export const BlindText = styled.h2`
   margin: -1px;
   width: 1px;
   height: 1px;
+`;
+
+export const VerticalSeperateLine = styled.div<{
+  height: number;
+  color?: string;
+}>`
+  display: inline-block;
+  width: 1px;
+  height: ${({ height }) => pxToRem(height)};
+  background-color: ${Colors.redf9};
+`;
+
+export const HorizontalSeperateLine = styled.div<{
+  color?: string;
+  opacity?: number;
+}>`
+  width: 100%;
+  height: 1px;
+  background-color: ${({ color }) => color || Colors.redf9};
+  opacity: ${({ opacity }) => opacity || 1};
 `;

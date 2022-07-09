@@ -37,7 +37,7 @@ const MainContentSection = () => {
   const rightBottomCircleAnimation = useScaleControl(0.6, 1.5, 0.6);
 
   useEffect(() => {
-    if (y >= 5000) {
+    if (Math.abs(y - 5000) <= 1) {
       setTimeout(() => {
         router.push("/skill");
       }, 1000);
@@ -74,7 +74,7 @@ const MainContentSection = () => {
           <Header1
             underline={{
               height: 4,
-              color: Colors.yellowff03
+              color: Colors.redf9
             }}
           >
             이유 없는 코드는 작성하지 않는
@@ -85,7 +85,7 @@ const MainContentSection = () => {
               weight={BOLD_WEIGHT}
               underline={{
                 height: 16,
-                color: Colors.yellowff03
+                color: Colors.redf9
               }}
             >
               박찬혁
@@ -107,7 +107,7 @@ const MainContentSection = () => {
             weight={BOLD_WEIGHT}
             underline={{
               height: 8,
-              color: Colors.yellowff03
+              color: Colors.redf9
             }}
           >
             무죄가 입증될 때까지 모든 코드는 유죄다
@@ -117,7 +117,7 @@ const MainContentSection = () => {
             <Header2
               underline={{
                 height: 8,
-                color: Colors.yellowff03
+                color: Colors.redf9
               }}
             >
               테스트 코드

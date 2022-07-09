@@ -12,3 +12,11 @@ declare module Common {
     moSrc?: StaticImageData;
   }
 }
+
+declare module Skill {
+  interface SkillType {
+    id: string;
+    spec: Common.imageSpecType;
+    proficiency: number;
+  }
+}
