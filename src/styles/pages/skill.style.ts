@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Colors from "~/constants/Colors";
-import { FlexBox, FlexCenter } from "~/constants/Common.style";
+import { FlexBox } from "~/constants/Common.style";
 import { pxToRem } from "~/constants/Size";
 
 export const Container = styled.main`
@@ -20,6 +20,9 @@ export const ContentsWrapper = styled(FlexBox)`
   will-change: transform;
 `;
 
-export const TitleContent = styled(FlexBox)``;
-
-export const SkillDomainWrapper = styled(FlexCenter)``;
+export const CategoryIndicator = styled.div`
+  position: fixed;
+  top: ${pxToRem(100)};
+  left: 50vw;
+  transform: translate3d(-50%, 0, 0);
+`;
