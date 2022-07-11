@@ -3,10 +3,10 @@ import Colors from "~/constants/Colors";
 import { FlexBox } from "~/constants/Common.style";
 import { pxToRem } from "~/constants/Size";
 
-export const Container = styled.main`
+export const Container = styled.main<{ totalWidth: number }>`
   background-color: ${Colors.brown2b};
   width: 100%;
-  height: 600vh;
+  height: calc(${({ totalWidth }) => pxToRem(totalWidth)} + 50vh);
 `;
 
 export const ContentsWrapper = styled(FlexBox)`
@@ -20,9 +20,18 @@ export const ContentsWrapper = styled(FlexBox)`
   will-change: transform;
 `;
 
-export const CategoryIndicator = styled.div`
-  position: fixed;
-  top: ${pxToRem(100)};
-  left: 50vw;
-  transform: translate3d(-50%, 0, 0);
+export const ArrowWrapper = styled.button`
+  width: ${pxToRem(200)};
+  height: ${pxToRem(200)};
+  transform: rotate(270deg);
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1.05) rotate(270deg) translate3d(0, -${pxToRem(30)}, 0);
+  }
+
+  path {
+    fill: ${Colors.yellowff03} !important;
+  }
 `;
