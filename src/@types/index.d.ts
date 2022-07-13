@@ -1,5 +1,6 @@
 declare module Common {
   type positionType = "relative" | "absolute" | "fixed" | "sticky";
+  type menuType = "skill" | "history" | "project" | "contact";
   interface offsetType {
     top?: number;
     right?: number;
