@@ -13,10 +13,12 @@ export const Text = styled.span<{
   maxWidth?: number;
   weight?: number;
   letterSpacing?: number;
+  fontFamily?: "NotoSansKR";
 }>`
   color: ${({ color }) => color || Colors.black};
   display: inline-block;
-  font-family: "NanumMyeongjo";
+  font-family: ${({ fontFamily }) => fontFamily || "NanumMyeongjo"};
+
   letter-spacing: -${({ letterSpacing }) => pxToRem(letterSpacing || 0.5)};
   ${({ lineHeight }) =>
     lineHeight && `line-height: ${pxToRem(lineHeight)} !important;`}
