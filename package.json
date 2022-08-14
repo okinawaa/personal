@@ -1,6 +1,6 @@
 {
   "name": "portfolio-chanhyuk",
-  "version": "1.2.1",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
