@@ -5,10 +5,10 @@ import { pxToRem } from "~/constants/Size";
 
 export const Container = styled(FlexBox)`
   width: ${pxToRem(850)};
-  padding-top: ${pxToRem(150)};
+  padding: ${pxToRem(150)} 0;
 `;
 
-export const ProjectItemWrapper = styled(FlexBox)`
+export const ItemWrapper = styled(FlexBox)`
   position: relative;
 
   &::before {
