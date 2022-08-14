@@ -17,14 +17,32 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     cursor: pointer;
+    color: inherit;
   }
 
   ul {
     list-style: none;
   }
-  
+
   input {
+    padding: 0;
+    margin: 0;
+
+    border: none;
+  }
+  
+  input, textarea {
     outline: none;
+    /* On iOS 5 and later */
+    border-radius: 0;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  input, textarea {
+    font-family: "NotoSansKR";
   }
 
   button {
@@ -35,12 +53,8 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
   }
 
-  svg,img {
+  svg, image, video {
     vertical-align: top;
-  }
-  
-  body {
-    will-change:  position;
   }
 
   html {
