@@ -18,7 +18,8 @@ export const Text = styled.span<{
   display: inline-block;
   font-family: "NanumMyeongjo";
   letter-spacing: -${({ letterSpacing }) => pxToRem(letterSpacing || 0.5)};
-  ${({ lineHeight }) => lineHeight && `line-height: ${pxToRem(lineHeight)};`}
+  ${({ lineHeight }) =>
+    lineHeight && `line-height: ${pxToRem(lineHeight)} !important;`}
   ${({ size }) => size && `font-size: ${pxToRem(size)};`};
   ${({ weight }) => weight && `font-weight: ${weight} !important;`};
   ${({ alignCenter }) => alignCenter && "text-align: center;"}

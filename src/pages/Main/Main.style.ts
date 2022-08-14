@@ -3,5 +3,6 @@ import { FlexBox } from "~/constants/Common.style";
 import { pxToRem } from "~/constants/Size";
 
 export const Container = styled(FlexBox)`
+  width: ${pxToRem(850)};
   padding-top: ${pxToRem(150)};
 `;
