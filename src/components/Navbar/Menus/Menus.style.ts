@@ -6,8 +6,8 @@ import { zIndex } from "~/constants/Variables";
 export const Container = styled(FlexCenter)`
   transform: rotate(-45deg);
 
-  top: ${pxToRem(100)};
-  left: ${pxToRem(160)};
+  top: ${pxToRem(120)};
+  left: ${pxToRem(260)};
   width: ${pxToRem(260)};
   z-index: ${zIndex.indicator};
 `;

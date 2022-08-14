@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import * as Styled from "./Navbar.style";
+import * as Styled from "./Menus.style";
 import MenuItem from "../MenuItem";
 import menus from "~/constants/data/menus";
 
@@ -12,7 +12,7 @@ const variants = {
   }
 };
 
-const Navbar = () => {
+const Menus = () => {
   return (
     <Styled.Container
       variants={variants}
@@ -28,4 +28,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Menus;

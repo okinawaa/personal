@@ -1,4 +1,5 @@
 import { Variants } from "framer-motion";
+import Link from "next/link";
 import * as Styled from "./MenuItem.style";
 
 interface MenuItemProps {
@@ -27,8 +28,16 @@ const variants: Variants = {
 
 const MenuItem = ({ title, scaleValue }: MenuItemProps) => {
   return (
-    <Styled.Container variants={variants}>
-      <Styled.Typo fontSize={90 + scaleValue * 20}>{title}</Styled.Typo>
+    <Styled.Container
+      variants={variants}
+      whileHover={{ scale: 1.1 }}
+      title={`${title} 로 이동하기`}
+    >
+      <Link href={title}>
+        <a>
+          <Styled.Typo fontSize={90 + scaleValue * 20}>{title}</Styled.Typo>
+        </a>
+      </Link>
     </Styled.Container>
   );
 };
