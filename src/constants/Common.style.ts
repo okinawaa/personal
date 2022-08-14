@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 import { media } from "./Media";
 import { pxToRem } from "./Size";
 
@@ -20,17 +20,32 @@ export const SizedBox = styled.div<{
 
 export const FlexBox = styled.div<{
   direction?: string;
-  alignItems?: string;
+  alignItems?: CSSProperties["alignItems"];
+  justifyContent?: CSSProperties["justifyContent"];
   gap?: number;
+  isVh?: boolean;
   bgColor?: string;
-  position?: "relative" | "absolute" | "fixed";
+  position?: CSSProperties["position"];
   moGap?: number;
+  shadow?: {
+    value: string;
+    borderRadius: number;
+  };
+  selfAlignRowCenter?: boolean;
+  fullWidth?: boolean;
+  fullHeight?: boolean;
 }>`
   position: ${({ position }) => position || "static"};
   display: flex;
   flex-direction: ${({ direction }) => direction || "row"};
   align-items: ${({ alignItems }) => alignItems || "flex-start"};
-  ${({ gap }) => gap && `gap: ${pxToRem(gap)};`}
+  justify-content: ${({ justifyContent }) => justifyContent || "flex-start"};
+  ${({ gap }) => gap !== undefined && `gap: ${pxToRem(gap)};`}
+
+  ${({ selfAlignRowCenter }) => selfAlignRowCenter && "margin: 0 auto;"}
+
+  ${({ fullWidth }) => fullWidth && "width: 100%;"}
+  ${({ fullHeight }) => fullHeight && "height: 100%;"}
 
   ${({ bgColor }) => bgColor && `background-color: ${bgColor};`}
 `;
@@ -38,14 +53,4 @@ export const FlexBox = styled.div<{
 export const FlexCenter = styled(FlexBox)`
   justify-content: center;
   align-items: center;
-`;
-
-// 대체텍스트
-export const BlindText = styled.h2`
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  width: 1px;
-  height: 1px;
 `;
