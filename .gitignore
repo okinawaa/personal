@@ -13,7 +13,7 @@
 /out/
 
 # production
-/build
+# /build for ec2 freetier
 
 # misc
 .DS_Store
