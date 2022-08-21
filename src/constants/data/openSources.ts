@@ -14,6 +14,10 @@ const openSources: Common.OpenSourceType[] = [
   {
     title: "react-query-tutorial",
     link: "https://github.com/ssi02014/react-query-tutorial"
+  },
+  {
+    title: "flutter_getx_boilerplate",
+    link: "https://github.com/KevinZhang19870314/flutter_getx_boilerplate/pull/7"
   }
 ];
 
