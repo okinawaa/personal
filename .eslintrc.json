@@ -1,6 +1,11 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "unused-imports", "react-hooks", "prettier"],
+  "plugins": [
+    "@typescript-eslint",
+    "unused-imports",
+    "react-hooks",
+    "prettier"
+  ],
   "extends": [
     "airbnb",
     "plugin:import/errors",
@@ -20,8 +25,12 @@
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": 0,
     "react/jsx-props-no-spreading": 0,
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "unused-imports/no-unused-imports": "error",
+    "no-unused-expressions": 0,
     "unused-imports/no-unused-vars": [
       "warn",
       {

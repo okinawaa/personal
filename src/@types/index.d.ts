@@ -1,4 +1,6 @@
 declare module Common {
+  type LanguageType = "ko-KR" | "en-US" | "ja-JP";
+
   interface ProjectType {
     title: string;
     date: string;
