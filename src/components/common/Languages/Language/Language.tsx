@@ -1,8 +1,9 @@
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Colors from "~/constants/Colors";
-import { Body3 } from "~/constants/Typography";
+import { BOLD_WEIGHT, EXTRA_BOLD_WEIGHT } from "~/constants/Variables";
 import LanguageProps from "./Language.props";
+import * as Styled from "./Language.style";
 
 const Language = ({ label, type }: LanguageProps) => {
   const { t, i18n } = useTranslation("main");
@@ -14,16 +15,28 @@ const Language = ({ label, type }: LanguageProps) => {
     [i18n]
   );
 
+  const isSelected = useMemo(
+    () => i18n.language === type,
+    [i18n.language, type]
+  );
   return (
     <button
       type="button"
       onClick={() => {
         toggleLocales(type);
       }}
+      title={
+        i18n.language === "en-US"
+          ? `${t("languages.buttonTitle")} ${label}`
+          : `${label}${t("languages.buttonTitle")}`
+      }
     >
-      <Body3 color={i18n.language === type ? Colors.green00 : undefined}>
+      <Styled.LanguageText
+        color={isSelected ? Colors.green00 : undefined}
+        weight={isSelected ? EXTRA_BOLD_WEIGHT : BOLD_WEIGHT}
+      >
         {label}
-      </Body3>
+      </Styled.LanguageText>
     </button>
   );
 };

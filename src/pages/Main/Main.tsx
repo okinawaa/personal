@@ -1,20 +1,43 @@
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { fetchCareers, fetchEducations, fetchSkills } from "~/apis/main";
 import Colors from "~/constants/Colors";
 import { FlexBox, SizedBox } from "~/constants/Common.style";
-import {
-  careers,
-  contacts,
-  educations,
-  openSources,
-  projects
-} from "~/constants/data";
+import { contacts, openSources, projects } from "~/constants/data";
 import { Body2, Body4, Caption2, Title2 } from "~/constants/Typography";
 import { EXTRA_BOLD_WEIGHT } from "~/constants/Variables";
 import SectionLayout from "~/layouts/SectionLayout";
 import * as Styled from "./Main.style";
 
 const Main = () => {
-  const { t } = useTranslation("main");
+  const { t, i18n } = useTranslation("main");
+  const language = i18n.language as Common.LanguageType;
+
+  const [skills, setSkills] = useState<string[]>([]);
+  const [careers, setCareers] = useState<Common.CareerType[]>([]);
+  const [education, setEducation] = useState<Common.EducationType>();
+
+  useEffect(() => {
+    const getSkills = async () => {
+      const skills = await fetchSkills(language);
+      setSkills(skills);
+    };
+
+    const getCareers = async () => {
+      const careers = await fetchCareers(language);
+      setCareers(careers);
+    };
+
+    const getEducations = async () => {
+      const education = await fetchEducations(language);
+      setEducation(education);
+    };
+
+    getSkills();
+    getCareers();
+    getEducations();
+  }, [language]);
+
   return (
     <Styled.Container direction="column" selfAlignRowCenter>
       <FlexBox direction="column" alignItems="center">
@@ -44,9 +67,11 @@ const Main = () => {
       <FlexBox direction="column" gap={40}>
         {/* 스킬 */}
         <SectionLayout title="SKILL">
-          <Body2>
-            HTML / CSS / Javascript / Typescript / React / Next.js / Flutter
-          </Body2>
+          <Styled.SkillWrapper gap={10}>
+            {skills.map(skill => (
+              <Body2 key={skill}>{skill}</Body2>
+            ))}
+          </Styled.SkillWrapper>
         </SectionLayout>
         {/* 프로젝트 */}
         <SectionLayout title="PROJECT">
@@ -101,15 +126,13 @@ const Main = () => {
         {/* 교육 */}
         <SectionLayout title="EDUCATION">
           <FlexBox gap={15} direction="column">
-            {educations.map(education => (
-              <Styled.ItemWrapper direction="column" key={education.title}>
-                <Body4>{education.title}</Body4>
-                <Body4 color={Colors.gray66}>{education.description}</Body4>
-                <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f}>
-                  {education.date}
-                </Caption2>
-              </Styled.ItemWrapper>
-            ))}
+            <Styled.ItemWrapper direction="column" gap={6}>
+              <Body4>{education?.title}</Body4>
+              <Body4 color={Colors.gray66}>{education?.description}</Body4>
+              <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f}>
+                {education?.date}
+              </Caption2>
+            </Styled.ItemWrapper>
           </FlexBox>
         </SectionLayout>
         {/* 연락처 */}

@@ -27,3 +27,26 @@ declare module Common {
     link?: string;
   }
 }
+declare module Skill {
+  interface DtoType {
+    "ko-KR": string[];
+    "en-US": string[];
+    "ja-JP": string[];
+  }
+}
+
+declare module Career {
+  interface DtoType {
+    "ko-KR": Common.CareerType[];
+    "en-US": Common.CareerType[];
+    "ja-JP": Common.CareerType[];
+  }
+}
+
+declare module Education {
+  interface DtoType {
+    "ko-KR": Common.EducationType;
+    "en-US": Common.EducationType;
+    "ja-JP": Common.EducationType;
+  }
+}

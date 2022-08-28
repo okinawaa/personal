@@ -1,28 +1,30 @@
+import { useTranslation } from "react-i18next";
 import Language from "./Language";
 import * as Styled from "./Languages.style";
 
-const LANGUAGE_LIST: {
-  label: string;
-  type: Common.LanguageType;
-}[] = [
-  {
-    label: "KO",
-    type: "ko-KR"
-  },
-  {
-    label: "EN",
-    type: "en-US"
-  },
-  {
-    label: "JP",
-    type: "ja-JP"
-  }
-];
-
 const Languages = () => {
+  const { t } = useTranslation("main");
+
+  const languageList: {
+    label: string;
+    type: Common.LanguageType;
+  }[] = [
+    {
+      label: t("languages.ko-KR"),
+      type: "ko-KR"
+    },
+    {
+      label: t("languages.en-US"),
+      type: "en-US"
+    },
+    {
+      label: t("languages.ja-JP"),
+      type: "ja-JP"
+    }
+  ];
   return (
     <Styled.Container gap={6} position="fixed">
-      {LANGUAGE_LIST.map(lang => (
+      {languageList.map(lang => (
         <Language key={lang.type} {...lang} />
       ))}
     </Styled.Container>

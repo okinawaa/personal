@@ -1,6 +1,6 @@
 const contacts: Common.ContactType[] = [
   {
-    title: "깃허브",
+    title: "github",
     link: "https://github.com/ChanhyukPark-Tech"
   },
   {
