@@ -1,0 +1,16 @@
+{
+  "introduction": {
+    "name": "Chanhyuk Park",
+    "job": "Front-end Developer",
+    "part": "Web & App",
+    "nation": "South Korea",
+    "title": "I majored in mechanical engineering and software engineering. Now I'm dreaming of becoming the best front-end developer of this era.",
+    "description": "I think the best front-end developer that I think subjectively is someone who can flexibly deliver any information to users independently of the platform. Adhere to two principles to be a good developer, not just a coder. Do not write unprovoked code. Even if it's a single line of code, or even a copy and paste code, I consider the existence of that code. I don't marry with technology. Promote the thinking capabilities of the developers without insisting on specific technologies in the fast-changing flood of technologies."
+  },
+  "languages": {
+    "ko-KR": "KO",
+    "en-US": "EN",
+    "ja-JP": "JP",
+    "buttonTitle": "Translating into"
+  }
+}

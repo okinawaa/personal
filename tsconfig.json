@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.extend.json",
   "compilerOptions": {
+    "types": ["node"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "./src",
@@ -23,7 +24,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": ["./node_modules/@types/", "./src/@types/**/*.d.ts"]
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./src/@types/**/*.d.ts",
+      "./.yarn/cache/**/*.d.ts"
+    ]
   },
   "include": ["src"],
   "exclude": ["node_modules"]

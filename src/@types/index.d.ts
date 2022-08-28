@@ -1,4 +1,6 @@
 declare module Common {
+  type LanguageType = "ko-KR" | "en-US" | "ja-JP";
+
   interface ProjectType {
     title: string;
     date: string;
@@ -23,5 +25,28 @@ declare module Common {
   interface ContactType {
     title: string;
     link?: string;
+  }
+}
+declare module Skill {
+  interface DtoType {
+    "ko-KR": string[];
+    "en-US": string[];
+    "ja-JP": string[];
+  }
+}
+
+declare module Career {
+  interface DtoType {
+    "ko-KR": Common.CareerType[];
+    "en-US": Common.CareerType[];
+    "ja-JP": Common.CareerType[];
+  }
+}
+
+declare module Education {
+  interface DtoType {
+    "ko-KR": Common.EducationType;
+    "en-US": Common.EducationType;
+    "ja-JP": Common.EducationType;
   }
 }

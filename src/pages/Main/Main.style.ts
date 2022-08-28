@@ -14,6 +14,12 @@ export const Container = styled(FlexBox)`
   }
 `;
 
+export const SkillWrapper = styled(FlexBox)`
+  ${media.tablet} {
+    flex-direction: column;
+  }
+`;
+
 export const ItemWrapper = styled(FlexBox)`
   position: relative;
 
