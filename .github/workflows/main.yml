@@ -6,13 +6,12 @@ name: CD Docker
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 env:
   DOCKER_IMAGE: ghcr.io/chanhyukpark-tech/portfolio
   VERSION: ${{ github.sha }}
-  NAME: go_cicd
-
+  NAME: chanhyuk-portfolio
 
 jobs:
   build:
@@ -50,7 +49,7 @@ jobs:
   deploy:
     needs: build
     name: Deploy
-    runs-on: [ self-hosted, label-go ]
+    runs-on: [self-hosted, label-go]
     steps:
       - name: Login to ghcr
         uses: docker/login-action@v1
