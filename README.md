@@ -7,6 +7,7 @@ docker build -t portfolio-image .
 ```
 
 
+
 ```
 docker run -itd --name portfolio-container -p 80:80 portfolio-image
 ```
