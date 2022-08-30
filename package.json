@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "CI=false && craco build",
     "test": "craco test --watchAll",
     "coverage": "craco test --watchAll --coverage",
     "eject": "react-scripts eject"
