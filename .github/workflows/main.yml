@@ -49,7 +49,7 @@ jobs:
           echo "REACT_APP_FIREBASE_MEASUREMENT_ID=${{ secrets.REACT_APP_FIREBASE_MEASUREMENT_ID }}" >> .env
           cat .env
           pwd
-          ls
+          ls -al
           readlink -f .env
       - name: Build and push
         id: docker_build
