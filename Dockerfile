@@ -3,7 +3,7 @@ FROM node:16 as build-stage
 WORKDIR /app
 ADD . .
 RUN yarn install
-RUN CI=false yarn build
+RUN yarn build
 
 
 # production stage
