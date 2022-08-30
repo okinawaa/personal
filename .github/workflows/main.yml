@@ -9,7 +9,7 @@ on:
     branches: [ "main" ]
 
 env:
-  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/trading
+  DOCKER_IMAGE: ghcr.io/chanhyuk/portfolio
   VERSION: ${{ github.sha }}
   NAME: go_cicd
 
