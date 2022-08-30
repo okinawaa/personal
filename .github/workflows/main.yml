@@ -12,6 +12,7 @@ env:
   DOCKER_IMAGE: ghcr.io/chanhyukpark-tech/portfolio
   VERSION: ${{ github.sha }}
   NAME: chanhyuk-portfolio
+  CI: false
 
 jobs:
   build:
