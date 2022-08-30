@@ -58,8 +58,6 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: ${{ env.DOCKER_IMAGE }}:latest
-        run: |
-          ls -al
 
   deploy:
     needs: build
@@ -75,4 +73,4 @@ jobs:
       - name: Docker run
         run: |
           docker stop ${{ env.NAME }} && docker rm ${{ env.NAME }} && docker rmi ${{ env.DOCKER_IMAGE }}:latest
-          docker run -d -p 80:80 --name ${{ env.NAME }} --restart always ${{ env.DOCKER_IMAGE }}:latest
+          docker run --env-file /home/ubuntu/.env -d -p 80:80 --name ${{ env.NAME }} --restart always ${{ env.DOCKER_IMAGE }}:latest
