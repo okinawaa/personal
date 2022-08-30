@@ -8,7 +8,7 @@ const openSources: Common.OpenSourceType[] = [
     link: "https://github.com/carbon-design-system/carbon/pull/11577#event-6779481229"
   },
   {
-    title: "default-hooks/pine-lab",
+    title: "pine-lab/default-hooks",
     link: "https://github.com/bigpicture-kr/default-hooks"
   },
   {
