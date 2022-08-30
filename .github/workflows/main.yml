@@ -12,7 +12,6 @@ env:
   DOCKER_IMAGE: ghcr.io/chanhyukpark-tech/portfolio
   VERSION: ${{ github.sha }}
   NAME: chanhyuk-portfolio
-  CI: ""
 
 jobs:
   build:
@@ -42,6 +41,8 @@ jobs:
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
+        env:
+          CI: false
         with:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
