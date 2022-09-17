@@ -1,5 +1,10 @@
 const projects: Common.ProjectType[] = [
   {
+    title: "새서울자수 웹페이지",
+    date: "2022. 09",
+    link: "https://pilot.ssemb.co.kr/home"
+  },
+  {
     title: "한국 야쿠르트 이벤트 페이지",
     date: "2022. 07",
     link: "https://yakultgame-event.co.kr/"
