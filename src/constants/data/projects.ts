@@ -28,6 +28,11 @@ const projects: Common.ProjectType[] = [
     title: "NanoScientific Symposium",
     date: "2022. 02",
     link: "https://event.nanoscientific.org/"
+  },
+  {
+    title: "한양대학교 연구실 웹페이지",
+    date: "2021. 12",
+    link: "https://assllab.github.io/#/"
   }
 ];
 
