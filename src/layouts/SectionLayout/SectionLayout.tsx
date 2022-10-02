@@ -5,12 +5,12 @@ import * as Styled from "./SectionLayout.style";
 
 const SectionLayout = ({ title, children }: SectionLayoutProps) => {
   return (
-    <Styled.Container>
+    <section>
       <Body3 fontFamily="NotoSansKR" color={Colors.green00}>
         {title}
       </Body3>
       <Styled.ContentsWrapper>{children}</Styled.ContentsWrapper>
-    </Styled.Container>
+    </section>
   );
 };
 

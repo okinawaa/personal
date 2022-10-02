@@ -39,24 +39,31 @@ const Main = () => {
   }, [language]);
 
   return (
-    <Styled.Container direction="column" selfAlignRowCenter>
+    <Styled.Container direction="column" selfAlignRowCenter as="main">
       <FlexBox direction="column" alignItems="center">
-        <Title2 weight={EXTRA_BOLD_WEIGHT} color={Colors.black33}>
+        <Title2 weight={EXTRA_BOLD_WEIGHT} color={Colors.black33} as="h1">
           ChanhyukPark-Tech
         </Title2>
         <SizedBox height={20} />
-        <Title2 weight={EXTRA_BOLD_WEIGHT} color={Colors.black}>
+        <Title2 weight={EXTRA_BOLD_WEIGHT} color={Colors.black} as="h2">
           {t("introduction.name")}
         </Title2>
 
         <SizedBox height={20} />
-        <Body4 color={Colors.gray66}>
+        <Body4 color={Colors.gray66} as="h3">
           {t("introduction.job")} / {t("introduction.part")}
         </Body4>
         <SizedBox height={10} />
-        <Body4 color={Colors.grayA8}>{t("introduction.nation")}</Body4>
+        <Body4 color={Colors.grayA8} as="h4">
+          {t("introduction.nation")}
+        </Body4>
         <SizedBox height={40} />
-        <Body4 color={Colors.gray5f} lineHeight={28} whiteSpace="pre-wrap">
+        <Body4
+          color={Colors.gray5f}
+          lineHeight={28}
+          whiteSpace="pre-wrap"
+          as="article"
+        >
           {t("introduction.title")}
           {"\n"}
           {t("introduction.description")}
