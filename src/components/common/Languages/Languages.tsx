@@ -23,7 +23,12 @@ const Languages = () => {
     }
   ];
   return (
-    <Styled.Container gap={6} position="fixed" justifyContent="space-evenly">
+    <Styled.Container
+      gap={6}
+      position="fixed"
+      justifyContent="space-evenly"
+      as="nav"
+    >
       {languageList.map(lang => (
         <Language key={lang.type} {...lang} />
       ))}

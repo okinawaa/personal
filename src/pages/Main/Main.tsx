@@ -4,7 +4,7 @@ import { fetchCareers, fetchEducations, fetchSkills } from "~/apis/main";
 import Colors from "~/constants/Colors";
 import { FlexBox, SizedBox } from "~/constants/Common.style";
 import { contacts, openSources, projects } from "~/constants/data";
-import { Body2, Body4, Caption2, Title2 } from "~/constants/Typography";
+import { Body4, Caption2, Title2 } from "~/constants/Typography";
 import { EXTRA_BOLD_WEIGHT } from "~/constants/Variables";
 import SectionLayout from "~/layouts/SectionLayout";
 import * as Styled from "./Main.style";
@@ -39,8 +39,8 @@ const Main = () => {
   }, [language]);
 
   return (
-    <Styled.Container _direction="column" selfAlignRowCenter as="main">
-      <FlexBox _direction="column" alignItems="center">
+    <Styled.Container _direction="column" selfAlignRowCenter>
+      <FlexBox _direction="column" alignItems="center" as="header">
         <Title2 weight={EXTRA_BOLD_WEIGHT} color={Colors.black33} as="h1">
           ChanhyukPark-Tech
         </Title2>
@@ -72,15 +72,21 @@ const Main = () => {
       </FlexBox>
       <SizedBox height={40} />
       {/* 본문 시작 */}
-      <FlexBox _direction="column" gap={40}>
+      <FlexBox _direction="column" gap={40} as="main">
         {/* 스킬 */}
         <SectionLayout title="SKILL">
           <Styled.SkillWrapper gap={10}>
-            {skills.map(skill => (
-              <Body2 moFontSize={14} key={skill} moLineHeight={18}>
-                {skill}
-              </Body2>
-            ))}
+            {skills.length === 0 ? (
+              <Body4 moFontSize={14} moLineHeight={18}>
+                스킬을 불러오고 있습니다.
+              </Body4>
+            ) : (
+              skills.map(skill => (
+                <Body4 moFontSize={14} key={skill} moLineHeight={18}>
+                  {skill}
+                </Body4>
+              ))
+            )}
           </Styled.SkillWrapper>
         </SectionLayout>
         {/* 프로젝트 */}
