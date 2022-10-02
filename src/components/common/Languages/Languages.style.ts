@@ -8,9 +8,12 @@ export const Container = styled(FlexBox)`
   right: ${pxToRem(50)};
   bottom: ${pxToRem(50)};
 
+  width: ${pxToRem(200)};
   ${media.tablet} {
     right: ${pxToRem(20)};
     bottom: ${pxToRem(20)};
+
+    width: ${pxToRem(180)};
 
     padding: ${pxToRem(4)} ${pxToRem(8)};
 

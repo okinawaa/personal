@@ -19,7 +19,7 @@ export const SizedBox = styled.div<{
 `;
 
 export const FlexBox = styled.div<{
-  direction?: string;
+  _direction?: CSSProperties["flexDirection"];
   alignItems?: CSSProperties["alignItems"];
   justifyContent?: CSSProperties["justifyContent"];
   gap?: number;
@@ -37,17 +37,23 @@ export const FlexBox = styled.div<{
 }>`
   position: ${({ position }) => position || "static"};
   display: flex;
-  flex-direction: ${({ direction }) => direction || "row"};
+
   align-items: ${({ alignItems }) => alignItems || "flex-start"};
   justify-content: ${({ justifyContent }) => justifyContent || "flex-start"};
   ${({ gap }) => gap !== undefined && `gap: ${pxToRem(gap)};`}
 
   ${({ selfAlignRowCenter }) => selfAlignRowCenter && "margin: 0 auto;"}
+  ${({ _direction }) => _direction && `flex-direction: ${_direction};`}
+  
 
   ${({ fullWidth }) => fullWidth && "width: 100%;"}
   ${({ fullHeight }) => fullHeight && "height: 100%;"}
 
   ${({ bgColor }) => bgColor && `background-color: ${bgColor};`}
+
+  ${media.tablet} {
+    ${({ moGap }) => moGap !== undefined && `gap: ${pxToRem(moGap)};`}
+  }
 `;
 
 export const FlexCenter = styled(FlexBox)`

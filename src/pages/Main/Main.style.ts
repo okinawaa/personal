@@ -20,8 +20,11 @@ export const SkillWrapper = styled(FlexBox)`
   }
 `;
 
-export const ItemWrapper = styled(FlexBox)`
+export const ItemWrapper = styled(FlexBox).attrs({
+  as: "li"
+})`
   position: relative;
+  flex-direction: column;
 
   &::before {
     content: "-";

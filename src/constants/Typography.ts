@@ -1,12 +1,13 @@
 import styled, { CSSProperties } from "styled-components";
 import Colors from "./Colors";
+import { media } from "./Media";
 import { pxToRem } from "./Size";
 import { LIGHT_WEIGHT } from "./Variables";
 
 export const Text = styled.span<{
   color?: string;
   lineHeight?: number;
-  size?: number;
+  _size?: number;
   whiteSpace?: CSSProperties["whiteSpace"];
   alignCenter?: boolean;
   ellipsis?: boolean;
@@ -14,6 +15,8 @@ export const Text = styled.span<{
   weight?: number;
   letterSpacing?: number;
   fontFamily?: "NotoSansKR";
+  moFontSize?: number;
+  moLineHeight?: number;
 }>`
   color: ${({ color }) => color || Colors.black};
   display: inline-block;
@@ -22,7 +25,7 @@ export const Text = styled.span<{
   letter-spacing: -${({ letterSpacing }) => pxToRem(letterSpacing || 0.5)};
   ${({ lineHeight }) =>
     lineHeight && `line-height: ${pxToRem(lineHeight)} !important;`}
-  ${({ size }) => size && `font-size: ${pxToRem(size)};`};
+  ${({ _size }) => _size && `font-size: ${pxToRem(_size)};`};
   ${({ weight }) => weight && `font-weight: ${weight} !important;`};
   ${({ alignCenter }) => alignCenter && "text-align: center;"}
   ${({ ellipsis, maxWidth }) =>
@@ -32,6 +35,13 @@ export const Text = styled.span<{
       maxWidth
     )}; white-space: nowrap;`}
     ${({ whiteSpace }) => whiteSpace && `white-space: ${whiteSpace};`};
+
+  ${media.tablet} {
+    ${({ moFontSize }) =>
+      moFontSize && `font-size: ${pxToRem(moFontSize)} !important;`}
+    ${({ moLineHeight }) =>
+      moLineHeight && `line-height: ${pxToRem(moLineHeight)} !important;`}
+  }
 `;
 
 // Caption 1 ~ 4

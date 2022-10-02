@@ -39,8 +39,8 @@ const Main = () => {
   }, [language]);
 
   return (
-    <Styled.Container direction="column" selfAlignRowCenter as="main">
-      <FlexBox direction="column" alignItems="center">
+    <Styled.Container _direction="column" selfAlignRowCenter as="main">
+      <FlexBox _direction="column" alignItems="center">
         <Title2 weight={EXTRA_BOLD_WEIGHT} color={Colors.black33} as="h1">
           ChanhyukPark-Tech
         </Title2>
@@ -63,6 +63,7 @@ const Main = () => {
           lineHeight={28}
           whiteSpace="pre-wrap"
           as="article"
+          moFontSize={14}
         >
           {t("introduction.title")}
           {"\n"}
@@ -71,93 +72,87 @@ const Main = () => {
       </FlexBox>
       <SizedBox height={40} />
       {/* 본문 시작 */}
-      <FlexBox direction="column" gap={40}>
+      <FlexBox _direction="column" gap={40}>
         {/* 스킬 */}
         <SectionLayout title="SKILL">
           <Styled.SkillWrapper gap={10}>
             {skills.map(skill => (
-              <Body2 key={skill}>{skill}</Body2>
+              <Body2 moFontSize={14} key={skill} moLineHeight={18}>
+                {skill}
+              </Body2>
             ))}
           </Styled.SkillWrapper>
         </SectionLayout>
         {/* 프로젝트 */}
         <SectionLayout title="PROJECT">
-          <FlexBox gap={15} direction="column">
-            {projects.map(project => (
-              <Styled.ItemWrapper direction="column" key={project.title}>
-                <a
-                  href={project.link}
-                  title={`${project.title} 프로젝트 보러가기`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Body4>{project.title}</Body4>
-                </a>
-                <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f}>
-                  {project.date}
-                </Caption2>
-              </Styled.ItemWrapper>
-            ))}
-          </FlexBox>
+          {projects.map(project => (
+            <Styled.ItemWrapper key={project.title}>
+              <a
+                href={project.link}
+                title={`${project.title} 프로젝트 보러가기`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Body4 moFontSize={14}>{project.title}</Body4>
+              </a>
+              <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f} as="time">
+                {project.date}
+              </Caption2>
+            </Styled.ItemWrapper>
+          ))}
         </SectionLayout>
         {/* 오픈소스 */}
         <SectionLayout title="OPEN SOURCE CONTRIBUTION">
-          <FlexBox gap={15} direction="column">
-            {openSources.map(openSource => (
-              <Styled.ItemWrapper direction="column" key={openSource.title}>
-                <a
-                  href={openSource.link}
-                  title={`${openSource.title} 오픈소스 프로젝트 보러가기`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Body4>{openSource.title}</Body4>
-                </a>
-              </Styled.ItemWrapper>
-            ))}
-          </FlexBox>
+          {openSources.map(openSource => (
+            <Styled.ItemWrapper key={openSource.title}>
+              <a
+                href={openSource.link}
+                title={`${openSource.title} 오픈소스 프로젝트 보러가기`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Body4 moFontSize={14}>{openSource.title}</Body4>
+              </a>
+            </Styled.ItemWrapper>
+          ))}
         </SectionLayout>
         {/* 경력 */}
         <SectionLayout title="CAREER">
-          <FlexBox gap={15} direction="column">
-            {careers.map(career => (
-              <Styled.ItemWrapper direction="column" key={career.title}>
-                <Body4>{career.title}</Body4>
-                <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f}>
-                  {career.date}
-                </Caption2>
-              </Styled.ItemWrapper>
-            ))}
-          </FlexBox>
+          {careers.map(career => (
+            <Styled.ItemWrapper key={career.title}>
+              <Body4 moFontSize={14}>{career.title}</Body4>
+              <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f} as="time">
+                {career.date}
+              </Caption2>
+            </Styled.ItemWrapper>
+          ))}
         </SectionLayout>
         {/* 교육 */}
         <SectionLayout title="EDUCATION">
-          <FlexBox gap={15} direction="column">
-            <Styled.ItemWrapper direction="column" gap={6}>
-              <Body4>{education?.title}</Body4>
-              <Body4 color={Colors.gray66}>{education?.description}</Body4>
-              <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f}>
-                {education?.date}
-              </Caption2>
-            </Styled.ItemWrapper>
-          </FlexBox>
+          <Styled.ItemWrapper gap={6}>
+            <Body4 moFontSize={14}>{education?.title}</Body4>
+            <Body4 moFontSize={14} color={Colors.gray66}>
+              {education?.description}
+            </Body4>
+            <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f} as="time">
+              {education?.date}
+            </Caption2>
+          </Styled.ItemWrapper>
         </SectionLayout>
         {/* 연락처 */}
         <SectionLayout title="CONTACT">
-          <FlexBox gap={15} direction="column">
-            {contacts.map(contact => (
-              <Styled.ItemWrapper direction="column" key={contact.title}>
-                <a
-                  href={contact.link}
-                  title={`${contact.title} 오픈소스 프로젝트 보러가기`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Body4>{contact.title}</Body4>
-                </a>
-              </Styled.ItemWrapper>
-            ))}
-          </FlexBox>
+          {contacts.map(contact => (
+            <Styled.ItemWrapper key={contact.title}>
+              <a
+                href={contact.link}
+                title={`${contact.title} 오픈소스 프로젝트 보러가기`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Body4 moFontSize={14}>{contact.title}</Body4>
+              </a>
+            </Styled.ItemWrapper>
+          ))}
         </SectionLayout>
       </FlexBox>
     </Styled.Container>
