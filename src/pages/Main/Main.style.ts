@@ -6,7 +6,7 @@ import { pxToRem } from "~/constants/Size";
 
 export const Container = styled(FlexBox)`
   width: ${pxToRem(850)};
-  padding: ${pxToRem(150)} 0;
+  padding: ${pxToRem(100)} 0;
 
   ${media.tablet} {
     width: ${pxToRem(350)};

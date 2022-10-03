@@ -60,3 +60,19 @@ export const FlexCenter = styled(FlexBox)`
   justify-content: center;
   align-items: center;
 `;
+
+export const Image = styled.img<{
+  _width?: number;
+  _height?: number;
+  moWidth?: number;
+  moHeight?: number;
+}>`
+  vertical-align: top;
+  width: ${({ _width }) => (_width ? pxToRem(_width) : "auto")};
+  height: ${({ _height }) => (_height ? pxToRem(_height) : "auto")};
+
+  ${media.tablet} {
+    ${({ moWidth }) => moWidth && `width : ${pxToRem(moWidth)};`}
+    ${({ moHeight }) => moHeight && `height : ${pxToRem(moHeight)};`}
+  }
+`;

@@ -1,3 +1,4 @@
 import Languages from "./Languages";
+import Footer from "./Footer";
 
-export default Languages;
+export { Languages, Footer };
