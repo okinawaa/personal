@@ -32,7 +32,7 @@ const Language = ({ label, type }: LanguageProps) => {
       }
     >
       <Styled.LanguageText
-        color={isSelected ? Colors.green00 : undefined}
+        _color={isSelected ? Colors.green00 : undefined}
         weight={isSelected ? EXTRA_BOLD_WEIGHT : BOLD_WEIGHT}
       >
         {label}

@@ -3,13 +3,13 @@ import { media } from "./Media";
 import { pxToRem } from "./Size";
 
 export const SizedBox = styled.div<{
-  height?: number;
-  width?: number;
+  _height?: number;
+  _width?: number;
   moWidth?: number;
   moHeight?: number;
 }>`
-  ${({ height }) => height && `height: ${pxToRem(height)};`}
-  ${({ width }) => width && `width: ${pxToRem(width)};`}
+  ${({ _height }) => _height && `height: ${pxToRem(_height)};`}
+  ${({ _width }) => _width && `width: ${pxToRem(_width)};`}
 
 
   ${media.tablet} {

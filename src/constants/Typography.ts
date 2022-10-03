@@ -5,7 +5,7 @@ import { pxToRem } from "./Size";
 import { LIGHT_WEIGHT } from "./Variables";
 
 export const Text = styled.span<{
-  color?: string;
+  _color?: string;
   lineHeight?: number;
   _size?: number;
   whiteSpace?: CSSProperties["whiteSpace"];
@@ -14,13 +14,13 @@ export const Text = styled.span<{
   maxWidth?: number;
   weight?: number;
   letterSpacing?: number;
-  fontFamily?: "NotoSansKR";
+  _fontFamily?: "NotoSansKR";
   moFontSize?: number;
   moLineHeight?: number;
 }>`
-  color: ${({ color }) => color || Colors.black};
+  color: ${({ _color }) => _color || Colors.black};
   display: inline-block;
-  font-family: ${({ fontFamily }) => fontFamily || "NanumMyeongjo"};
+  font-family: ${({ _fontFamily }) => _fontFamily || "NanumMyeongjo"};
 
   letter-spacing: -${({ letterSpacing }) => pxToRem(letterSpacing || 0.5)};
   ${({ lineHeight }) =>

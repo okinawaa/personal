@@ -41,48 +41,50 @@ const Main = () => {
   return (
     <Styled.Container _direction="column" selfAlignRowCenter>
       <FlexBox _direction="column" alignItems="center" as="header">
-        <Title2 weight={EXTRA_BOLD_WEIGHT} color={Colors.black33} as="h1">
+        <Title2 weight={EXTRA_BOLD_WEIGHT} _color={Colors.black33} as="h1">
           ChanhyukPark-Tech
         </Title2>
-        <SizedBox height={20} />
-        <Title2 weight={EXTRA_BOLD_WEIGHT} color={Colors.black} as="h2">
+        <SizedBox _height={20} />
+        <Title2 weight={EXTRA_BOLD_WEIGHT} _color={Colors.black} as="h2">
           {t("introduction.name")}
         </Title2>
 
-        <SizedBox height={20} />
-        <Body4 color={Colors.gray66} as="h3">
+        <SizedBox _height={20} />
+        <Body4 _color={Colors.gray66} as="h3">
           {t("introduction.job")} / {t("introduction.part")}
         </Body4>
-        <SizedBox height={10} />
-        <Body4 color={Colors.grayA8} as="h4">
+        <SizedBox _height={10} />
+        <Body4 _color={Colors.grayA8} as="h4">
           {t("introduction.nation")}
         </Body4>
-        <SizedBox height={40} />
-        <Body4
-          color={Colors.gray5f}
-          lineHeight={28}
-          whiteSpace="pre-wrap"
-          as="article"
-          moFontSize={14}
-        >
-          {t("introduction.title")}
-          {"\n"}
-          {t("introduction.description")}
-        </Body4>
+        <SizedBox _height={40} />
+        <article>
+          <Body4
+            _color={Colors.gray5f}
+            lineHeight={28}
+            whiteSpace="pre-wrap"
+            as="h5"
+            moFontSize={14}
+          >
+            {t("introduction.title")}
+            {"\n"}
+            {t("introduction.description")}
+          </Body4>
+        </article>
       </FlexBox>
-      <SizedBox height={40} />
+      <SizedBox _height={40} />
       {/* 본문 시작 */}
       <FlexBox _direction="column" gap={40} as="main">
         {/* 스킬 */}
-        <SectionLayout title="SKILL">
-          <Styled.SkillWrapper gap={10}>
+        <SectionLayout title="SKILL" list={false}>
+          <Styled.SkillWrapper gap={10} as="ul">
             {skills.length === 0 ? (
               <Body4 moFontSize={14} moLineHeight={18}>
                 스킬을 불러오고 있습니다.
               </Body4>
             ) : (
               skills.map(skill => (
-                <Body4 moFontSize={14} key={skill} moLineHeight={18}>
+                <Body4 moFontSize={14} key={skill} moLineHeight={18} as="li">
                   {skill}
                 </Body4>
               ))
@@ -101,7 +103,7 @@ const Main = () => {
               >
                 <Body4 moFontSize={14}>{project.title}</Body4>
               </a>
-              <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f} as="time">
+              <Caption2 _fontFamily="NotoSansKR" _color={Colors.gray5f}>
                 {project.date}
               </Caption2>
             </Styled.ItemWrapper>
@@ -124,39 +126,51 @@ const Main = () => {
         </SectionLayout>
         {/* 경력 */}
         <SectionLayout title="CAREER">
-          {careers.map(career => (
-            <Styled.ItemWrapper key={career.title}>
-              <Body4 moFontSize={14}>{career.title}</Body4>
-              <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f} as="time">
-                {career.date}
-              </Caption2>
-            </Styled.ItemWrapper>
-          ))}
+          {careers.length === 0 ? (
+            <Body4>경력을 불러오고 있습니다.</Body4>
+          ) : (
+            careers.map(career => (
+              <Styled.ItemWrapper key={career.title}>
+                <Body4 moFontSize={14}>{career.title}</Body4>
+                <Caption2 _fontFamily="NotoSansKR" _color={Colors.gray5f}>
+                  {career.date}
+                </Caption2>
+              </Styled.ItemWrapper>
+            ))
+          )}
         </SectionLayout>
         {/* 교육 */}
         <SectionLayout title="EDUCATION">
-          <Styled.ItemWrapper gap={6}>
-            <Body4 moFontSize={14}>{education?.title}</Body4>
-            <Body4 moFontSize={14} color={Colors.gray66}>
-              {education?.description}
-            </Body4>
-            <Caption2 fontFamily="NotoSansKR" color={Colors.gray5f} as="time">
-              {education?.date}
-            </Caption2>
-          </Styled.ItemWrapper>
+          {education ? (
+            <Styled.ItemWrapper gap={6}>
+              <Body4 moFontSize={14}>{education?.title}</Body4>
+              <Body4 moFontSize={14} _color={Colors.gray66}>
+                {education?.description}
+              </Body4>
+              <Caption2 _fontFamily="NotoSansKR" _color={Colors.gray5f}>
+                {education?.date}
+              </Caption2>
+            </Styled.ItemWrapper>
+          ) : (
+            <Body4>교육을 불러오고 있습니다.</Body4>
+          )}
         </SectionLayout>
         {/* 연락처 */}
         <SectionLayout title="CONTACT">
           {contacts.map(contact => (
             <Styled.ItemWrapper key={contact.title}>
-              <a
-                href={contact.link}
-                title={`${contact.title} 오픈소스 프로젝트 보러가기`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              {contact.link ? (
+                <a
+                  href={contact.link ?? "#"}
+                  title={`${contact.title} 로 바로가기`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Body4 moFontSize={14}>{contact.title}</Body4>
+                </a>
+              ) : (
                 <Body4 moFontSize={14}>{contact.title}</Body4>
-              </a>
+              )}
             </Styled.ItemWrapper>
           ))}
         </SectionLayout>
