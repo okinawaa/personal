@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.extend.json",
   "compilerOptions": {
-    "types": ["node"],
+    "types": ["node", "@types/jest", "@types/testing-library__jest-dom"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "./src",
@@ -24,12 +24,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": [
-      "./node_modules/@types/",
-      "./src/@types/**/*.d.ts",
-      "./.yarn/cache/**/*.d.ts"
-    ]
+    "typeRoots": ["./src/@types/**/*.d.ts", "./.yarn/cache/**/*.d.ts"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "include": ["src"]
 }
