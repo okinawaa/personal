@@ -14,8 +14,16 @@ jest.mock("react-i18next", () => ({
   }
 }));
 
-test("renders learn react link", () => {
-  render(<Language label="한국어" type="ko-KR" />);
-  const LanguageText = screen.getByText(/한국어/i);
-  expect(LanguageText).toBeInTheDocument();
+describe("📂 components/common/Languages/Language", () => {
+  test("🟢 renders label well", () => {
+    render(<Language label="한국어" type="ko-KR" />);
+    const LanguageText = screen.getByText(/한국어/i);
+    expect(LanguageText).toBeInTheDocument();
+  });
+
+  test("🔴 renders not render other label well", () => {
+    render(<Language label="한국어" type="ko-KR" />);
+    const LanguageText = screen.queryByText(/한국 어/i);
+    expect(LanguageText).not.toBeInTheDocument();
+  });
 });

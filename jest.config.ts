@@ -8,10 +8,10 @@ export default {
       branches: 100,
       functions: 100,
       lines: 100,
-      statements: 100,
-    },
+      statements: 100
+    }
   },
   modulePaths: ["./"],
   collectCoverageFrom: ["**/*.{ts,tsx}"],
-  coveragePathIgnorePatterns: ["/.next/", "/__tests__/", ".d.ts"],
+  coveragePathIgnorePatterns: ["/.next/", "/__tests__/", ".d.ts"]
 };
