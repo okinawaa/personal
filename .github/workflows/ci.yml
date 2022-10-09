@@ -27,7 +27,7 @@ jobs:
 
       # Run test cases and this could ensure minimum coverage as well if set
       - name: Execute test cases
-        run: yarn test
+        run: yarn test:ci
 
       - name: Create test build
         run: yarn build

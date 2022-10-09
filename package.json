@@ -24,6 +24,7 @@
     "build": "craco build",
     "lint": "craco lint",
     "test": "craco test --watchAll",
+    "test:ci": "craco test --watchAll=false",
     "coverage": "craco test --watchAll --coverage",
     "eject": "react-scripts eject"
   },
