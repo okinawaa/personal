@@ -17,7 +17,7 @@ jest.mock("react-i18next", () => ({
 describe("📂 components/common/Languages/Language", () => {
   test("🟢 renders label well", () => {
     render(<Language label="한국어" type="ko-KR" />);
-    const LanguageText = screen.getByText(/한국어/i);
+    const LanguageText = screen.getByText(/한국 어/i);
     expect(LanguageText).toBeInTheDocument();
   });
 
