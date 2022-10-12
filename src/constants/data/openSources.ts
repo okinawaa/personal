@@ -1,7 +1,7 @@
 const openSources: Common.OpenSourceType[] = [
   {
     title: "toss/slash",
-    link: "https://github.com/toss/slash/pulls/ChanhyukPark-Tech"
+    link: "https://github.com/toss/slash/pulls?q=is%3Apr+author%3AChanhyukPark-Tech+"
   },
   {
     title: "naver/fe-news",
