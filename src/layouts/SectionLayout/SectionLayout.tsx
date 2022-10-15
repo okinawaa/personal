@@ -10,7 +10,7 @@ const SectionLayout = ({
 }: SectionLayoutProps) => {
   return (
     <section>
-      <Body3 _fontFamily="NotoSansKR" _color={Colors.green00} moFontSize={16}>
+      <Body3 _color={Colors.green00} moFontSize={16}>
         {title}
       </Body3>
       {list ? (
