@@ -14,13 +14,12 @@ export const Text = styled.span<{
   maxWidth?: number;
   weight?: number;
   letterSpacing?: number;
-  _fontFamily?: "NotoSansKR";
   moFontSize?: number;
   moLineHeight?: number;
 }>`
   color: ${({ _color }) => _color || Colors.black};
   display: inline-block;
-  font-family: ${({ _fontFamily }) => _fontFamily || "NanumMyeongjo"};
+  font-family: "NotoSansKR";
 
   letter-spacing: -${({ letterSpacing }) => pxToRem(letterSpacing || 0.5)};
   ${({ lineHeight }) =>

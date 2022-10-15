@@ -103,9 +103,7 @@ const Main = () => {
               >
                 <Body4 moFontSize={14}>{project.title}</Body4>
               </a>
-              <Caption2 _fontFamily="NotoSansKR" _color={Colors.gray5f}>
-                {project.date}
-              </Caption2>
+              <Caption2 _color={Colors.gray5f}>{project.date}</Caption2>
             </Styled.ItemWrapper>
           ))}
         </SectionLayout>
@@ -132,9 +130,7 @@ const Main = () => {
             careers.map(career => (
               <Styled.ItemWrapper key={career.title}>
                 <Body4 moFontSize={14}>{career.title}</Body4>
-                <Caption2 _fontFamily="NotoSansKR" _color={Colors.gray5f}>
-                  {career.date}
-                </Caption2>
+                <Caption2 _color={Colors.gray5f}>{career.date}</Caption2>
               </Styled.ItemWrapper>
             ))
           )}
@@ -147,9 +143,7 @@ const Main = () => {
               <Body4 moFontSize={14} _color={Colors.gray66}>
                 {education?.description}
               </Body4>
-              <Caption2 _fontFamily="NotoSansKR" _color={Colors.gray5f}>
-                {education?.date}
-              </Caption2>
+              <Caption2 _color={Colors.gray5f}>{education?.date}</Caption2>
             </Styled.ItemWrapper>
           ) : (
             <Body4>교육을 불러오고 있습니다.</Body4>
