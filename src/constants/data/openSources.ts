@@ -4,6 +4,10 @@ const openSources: Common.OpenSourceType[] = [
     link: "https://github.com/toss/slash/pulls?q=is%3Apr+author%3AChanhyukPark-Tech+"
   },
   {
+    title: "falso | All the Fake Data for All Your Real Needs",
+    link: "https://github.com/ngneat/falso/pulls?q=is%3Apr+author%3AChanhyukPark-Tech"
+  },
+  {
     title: "naver/fe-news",
     link: "https://github.com/naver/fe-news/pull/22"
   },
