@@ -1,47 +1,33 @@
-/* NanumMyeongjo */
-
-@font-face {
-  font-family: "NanumMyeongjo";
-  src: url("../assets/fonts/NanumMyeongjo.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "NanumMyeongjo";
-  src: url("../assets/fonts/NanumMyeongjoBold.woff") format("woff");
-  font-weight: 700;
-  font-display: swap;
-}
-
 /* NotoSansKR */
 
 @font-face {
   font-family: "NotoSansKR";
   src: url("../assets/fonts/NotoSansKR-Bold.woff") format("woff");
   font-weight: 700;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "NotoSansKR";
   src: url("../assets/fonts/NotoSansKR-Light.woff") format("woff");
   font-weight: 300;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
   font-family: "NotoSansKR";
   src: url("../assets/fonts/NotoSansKR-Medium.woff") format("woff");
   font-weight: 500;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "NotoSansKR";
   src: url("../assets/fonts/NotoSansKR-Regular.woff") format("woff");
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "NotoSansKR";
   src: url("../assets/fonts/NotoSansKR-Thin.woff") format("woff");
   font-weight: 100;
-  font-display: swap;
+  font-display: block;
 }
