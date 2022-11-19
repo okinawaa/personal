@@ -1,11 +1,11 @@
 const openSources: Common.OpenSourceType[] = [
   {
     title: "toss/slash",
-    link: "https://github.com/toss/slash/pulls?q=is%3Apr+author%3AChanhyukPark-Tech+"
+    link: "https://github.com/toss/slash/issues?q=involves%3AChanhyukPark-Tech"
   },
   {
     title: "falso | All the Fake Data for All Your Real Needs",
-    link: "https://github.com/ngneat/falso/pulls?q=is%3Apr+author%3AChanhyukPark-Tech"
+    link: "https://github.com/ngneat/falso/issues?q=involves%3AChanhyukPark-Tech"
   },
   {
     title: "naver/fe-news",
