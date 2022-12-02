@@ -6,7 +6,6 @@
 - i18n
 - firebase
 - craco
-
 - github action
 - docker
 - ec2
