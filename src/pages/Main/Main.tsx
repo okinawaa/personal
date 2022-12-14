@@ -190,7 +190,7 @@ const Main = () => {
                 </a>
 
                 <SizedBox _height={10} />
-                <Body4 whiteSpace="pre-wrap">
+                <Body4 moFontSize={14} whiteSpace="pre-wrap">
                   {recommendation.description}
                 </Body4>
               </Styled.ItemWrapper>
