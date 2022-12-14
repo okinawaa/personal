@@ -26,6 +26,11 @@ declare module Common {
     title: string;
     link?: string;
   }
+  interface RecommendationType {
+    title: string;
+    link: string;
+    description: string;
+  }
 }
 declare module Skill {
   interface DtoType {
