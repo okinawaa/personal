@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { fetchCareers, fetchEducations, fetchSkills } from "~/apis/main";
+import { Recommendation } from "~/components/main";
 import Colors from "~/constants/Colors";
 import { FlexBox, SizedBox } from "~/constants/Common.style";
-import {
-  contacts,
-  openSources,
-  projects,
-  recommendations
-} from "~/constants/data";
-import { Body4, Caption2, Title2, Body2 } from "~/constants/Typography";
+import { contacts, openSources, projects } from "~/constants/data";
+import { Body4, Caption2, Title2 } from "~/constants/Typography";
 import { EXTRA_BOLD_WEIGHT } from "~/constants/Variables";
 import SectionLayout from "~/layouts/SectionLayout";
 import * as Styled from "./Main.style";
@@ -174,30 +170,7 @@ const Main = () => {
           ))}
         </SectionLayout>
         {/* 추천사 */}
-        <SectionLayout title="Recommendation">
-          {recommendations.map(recommendation => (
-            <>
-              <Styled.ItemWrapper key={recommendation.title}>
-                <a
-                  href={recommendation.link}
-                  title={`${recommendation.title}님 깃허브 보러가기`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Body2 _color={Colors.gray5f} moFontSize={14}>
-                    {recommendation.title}
-                  </Body2>
-                </a>
-
-                <SizedBox _height={10} />
-                <Body4 moFontSize={14} whiteSpace="pre-wrap">
-                  {recommendation.description}
-                </Body4>
-              </Styled.ItemWrapper>
-              <Styled.HorizontalLine />
-            </>
-          ))}
-        </SectionLayout>
+        <Recommendation />
       </FlexBox>
     </Styled.Container>
   );
