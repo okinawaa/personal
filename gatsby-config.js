@@ -8,14 +8,18 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-const path = require("path");
-module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`
+const siteMetadata = {
+  title: `chanhyuk portfolio`,
+  author: {
+    name: `Chanhyuk Park`,
+    summary: `웹 프론트엔드 개발자입니다. 코드 그 자체의 존재유무에 대하여 생각합니다.`
   },
+  description: `제가 지닌 가치관과, 기록을 전달합니다.`,
+  siteUrl: `https://chanhyuk.com`
+};
+
+module.exports = {
+  siteMetadata,
   plugins: [
     {
       resolve: "gatsby-plugin-typescript",
