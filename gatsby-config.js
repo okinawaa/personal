@@ -24,12 +24,6 @@ module.exports = {
         allExtensions: true
       }
     },
-    {
-      resolve: "gatsby-plugin-root-import",
-      options: {
-        "~": path.join(__dirname, "src")
-      }
-    },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
