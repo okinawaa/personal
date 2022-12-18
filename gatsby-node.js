@@ -1,22 +1,10 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: <https://www.gatsbyjs.com/docs/node-apis/>
- */
+import { resolve } from "path";
 
-// You can delete this file if you're not using it
-
-const path = require("path");
-
-// Setup Import Alias
-exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
-  const output = getConfig().output || {};
-
+export const onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
-    output,
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, "src"),
+        "~": resolve(__dirname, `src`)
       }
     }
   });
