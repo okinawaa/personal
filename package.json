@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "chanhyuk-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "for me",
+  "version": "0.0.2",
+  "author": "Chanhyuk <chanhyuk-tech@kakao.com>",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -42,9 +42,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ChanhyukPark-Tech/portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ChanhyukPark-Tech/portfolio/issues"
   }
 }
