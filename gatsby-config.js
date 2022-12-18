@@ -7,6 +7,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+const path = require("path");
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
