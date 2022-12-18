@@ -5312,6 +5312,11 @@ gatsby-plugin-page-creator@^5.3.1:
     globby "^11.1.0"
     lodash "^4.17.21"
 
+gatsby-plugin-root-import@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-root-import/-/gatsby-plugin-root-import-2.0.9.tgz#a511c0927164e3fd66052426fcfd5895d8c0045c"
+  integrity sha512-Cj6zBQW/XirHyLGyXtyhvhMwLUZDjFHSJwCI7mF9yAuX1PFoOVqUVWKp9jvtoKm8nKvly3IU/OPRXzlmYjeEkA==
+
 gatsby-plugin-sharp@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-5.3.2.tgz#b7b93f3ac1375aab0d7209ed989d0af4fd451d44"
