@@ -1,37 +1,38 @@
-import styled, { CSSProperties } from "styled-components";
-import Colors from "./Colors";
-import { media } from "./Media";
-import { pxToRem } from "./Size";
-import { LIGHT_WEIGHT } from "./Variables";
+import styled from '@emotion/styled'
+import { CSSProperties } from 'react'
+import Colors from './Colors'
+import { media } from './Media'
+import { pxToRem } from './Size'
+import { LIGHT_WEIGHT } from './Variables'
 
 export const Text = styled.span<{
-  _color?: string;
-  lineHeight?: number;
-  _size?: number;
-  whiteSpace?: CSSProperties["whiteSpace"];
-  alignCenter?: boolean;
-  ellipsis?: boolean;
-  maxWidth?: number;
-  weight?: number;
-  letterSpacing?: number;
-  moFontSize?: number;
-  moLineHeight?: number;
+  _color?: string
+  lineHeight?: number
+  _size?: number
+  whiteSpace?: CSSProperties['whiteSpace']
+  alignCenter?: boolean
+  ellipsis?: boolean
+  maxWidth?: number
+  weight?: number
+  letterSpacing?: number
+  moFontSize?: number
+  moLineHeight?: number
 }>`
   color: ${({ _color }) => _color || Colors.black};
   display: inline-block;
-  font-family: "NotoSansKR";
+  font-family: 'NotoSansKR';
 
   letter-spacing: -${({ letterSpacing }) => pxToRem(letterSpacing || 0.5)};
   ${({ lineHeight }) =>
     lineHeight && `line-height: ${pxToRem(lineHeight)} !important;`}
   ${({ _size }) => _size && `font-size: ${pxToRem(_size)};`};
   ${({ weight }) => weight && `font-weight: ${weight} !important;`};
-  ${({ alignCenter }) => alignCenter && "text-align: center;"}
+  ${({ alignCenter }) => alignCenter && 'text-align: center;'}
   ${({ ellipsis, maxWidth }) =>
     ellipsis &&
     maxWidth &&
     `text-overflow: ellipsis; overflow: hidden; max-width: ${pxToRem(
-      maxWidth
+      maxWidth,
     )}; white-space: nowrap;`}
     ${({ whiteSpace }) => whiteSpace && `white-space: ${whiteSpace};`};
 
@@ -41,7 +42,7 @@ export const Text = styled.span<{
     ${({ moLineHeight }) =>
       moLineHeight && `line-height: ${pxToRem(moLineHeight)} !important;`}
   }
-`;
+`
 
 // Caption 1 ~ 4
 
@@ -52,11 +53,11 @@ export const Text = styled.span<{
  * @bold 300
  */
 export const Caption4 = styled(Text)`
-  font-family: "NotoSansKR";
+  font-family: 'NotoSansKR';
   font-size: ${pxToRem(8)};
   font-weight: ${LIGHT_WEIGHT};
   line-height: ${pxToRem(11)};
-`;
+`
 
 /**
  * 캡션 3
@@ -66,7 +67,7 @@ export const Caption4 = styled(Text)`
 export const Caption3 = styled(Text)`
   font-size: ${pxToRem(10)};
   line-height: ${pxToRem(12)};
-`;
+`
 
 /**
  * 캡션 2
@@ -76,7 +77,7 @@ export const Caption3 = styled(Text)`
 export const Caption2 = styled(Text)`
   font-size: ${pxToRem(12)};
   line-height: ${pxToRem(22)};
-`;
+`
 
 /**
  * 캡션 1
@@ -86,7 +87,7 @@ export const Caption2 = styled(Text)`
 export const Caption1 = styled(Text)`
   font-size: ${pxToRem(14)};
   line-height: ${pxToRem(24)};
-`;
+`
 
 // Body 1 ~ 4
 /**
@@ -97,7 +98,7 @@ export const Caption1 = styled(Text)`
 export const Body4 = styled(Text)`
   font-size: ${pxToRem(16)};
   line-height: ${pxToRem(22)};
-`;
+`
 
 /**
  * 바디 3
@@ -107,7 +108,7 @@ export const Body4 = styled(Text)`
 export const Body3 = styled(Text)`
   font-size: ${pxToRem(18)};
   line-height: ${pxToRem(28)};
-`;
+`
 
 /**
  * 바디 2
@@ -117,7 +118,7 @@ export const Body3 = styled(Text)`
 export const Body2 = styled(Text)`
   font-size: ${pxToRem(20)};
   line-height: ${pxToRem(30)};
-`;
+`
 
 /**
  * 바디 1
@@ -127,7 +128,7 @@ export const Body2 = styled(Text)`
 export const Body1 = styled(Text)`
   font-size: ${pxToRem(24)};
   line-height: ${pxToRem(34)};
-`;
+`
 
 // Title 1 ~ 2
 
@@ -139,7 +140,7 @@ export const Body1 = styled(Text)`
 export const Title2 = styled(Text)`
   font-size: ${pxToRem(28)};
   line-height: ${pxToRem(38)};
-`;
+`
 
 /**
  * 타이틀 1
@@ -149,7 +150,7 @@ export const Title2 = styled(Text)`
 export const Title1 = styled(Text)`
   font-size: ${pxToRem(32)};
   line-height: ${pxToRem(42)};
-`;
+`
 
 // Header 1 ~ 2
 
@@ -161,7 +162,7 @@ export const Title1 = styled(Text)`
 export const Header2 = styled(Text)`
   font-size: ${pxToRem(40)};
   line-height: ${pxToRem(50)};
-`;
+`
 
 /**
  * 헤더 1
@@ -171,4 +172,4 @@ export const Header2 = styled(Text)`
 export const Header1 = styled(Text)`
   font-size: ${pxToRem(48)};
   line-height: ${pxToRem(58)};
-`;
+`

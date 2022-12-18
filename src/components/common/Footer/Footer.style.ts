@@ -1,7 +1,5 @@
-import styled from "styled-components";
-import { FlexBox } from "~/constants/Common.style";
-import { media } from "~/constants/Media";
-import { pxToRem } from "~/constants/Size";
+import styled from "@emotion/styled";
+import { FlexBox, media, pxToRem } from "~/constants";
 
 export const Container = styled(FlexBox)`
   width: ${pxToRem(850)};

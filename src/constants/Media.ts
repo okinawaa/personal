@@ -3,7 +3,7 @@ import {
   XD_LAPTOP_WIDTH,
   XD_MOBILE_WIDTH,
   XD_TABLET_WIDTH
-} from "~/constants/Variables";
+} from "./Variables";
 
 const customMediaQuery = (maxWidth: number): string =>
   `@media (max-width: ${maxWidth}px)`;

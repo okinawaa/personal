@@ -1,4 +1,5 @@
-import styled, { CSSProperties } from "styled-components";
+import styled from "@emotion/styled";
+import { CSSProperties } from "react";
 import { media } from "./Media";
 import { pxToRem } from "./Size";
 

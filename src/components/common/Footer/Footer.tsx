@@ -1,10 +1,10 @@
-import { xHTML } from "@images/common";
+import { xHTML } from "~/assets/images/common";
 import { Image } from "~/constants/Common.style";
 import * as Styled from "./Footer.style";
 
 const Footer = () => {
   return (
-    <Styled.Container gap={20} moGap={10} as="footer" data-testid="footer">
+    <Styled.Container gap={20} moGap={10} as="footer">
       <a
         href="http://jigsaw.w3.org/css-validator/check/referer"
         title="w3c css 검사에 통과하였습니다."

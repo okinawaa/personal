@@ -1,11 +1,9 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Colors from "~/constants/Colors";
 import { FlexBox } from "~/constants/Common.style";
 import { pxToRem } from "~/constants/Size";
 
-export const ItemWrapper = styled(FlexBox).attrs({
-  as: "li"
-})`
+export const ItemWrapper = styled(FlexBox)`
   position: relative;
   flex-direction: column;
 
