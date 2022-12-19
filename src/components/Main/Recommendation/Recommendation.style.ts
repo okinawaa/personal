@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Body4 } from "~/constants";
 import Colors from "~/constants/Colors";
 import { FlexBox } from "~/constants/Common.style";
 import { pxToRem } from "~/constants/Size";
@@ -22,4 +23,10 @@ export const HorizontalLine = styled.hr`
   border: 0;
   background-color: ${Colors.grayA8};
   height: 1px;
+`;
+
+export const Title = styled(Body4)`
+  &:hover {
+    color: ${Colors.black};
+  }
 `;

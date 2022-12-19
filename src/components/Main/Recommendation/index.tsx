@@ -14,16 +14,16 @@ const Recommendation = () => {
     <SectionLayout title="Recommendation">
       {recommendations.map(recommendation => (
         <Fragment key={recommendation.title}>
-          <Styled.ItemWrapper key={recommendation.title} as="li">
+          <Styled.ItemWrapper as="li">
             <a
               href={recommendation.link}
-              title={`${recommendation.title}님 깃허브 보러가기`}
+              title={`${recommendation.title} 깃허브 보러가기`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Body4 _color={Colors.gray5f} moFontSize={14}>
+              <Styled.Title _color={Colors.gray5f} moFontSize={14}>
                 {recommendation.title}
-              </Body4>
+              </Styled.Title>
             </a>
 
             <SizedBox _height={10} />
