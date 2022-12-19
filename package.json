@@ -2,7 +2,7 @@
   "name": "chanhyuk-portfolio",
   "private": true,
   "description": "for me",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Chanhyuk <chanhyuk-tech@kakao.com>",
   "dependencies": {
     "@emotion/react": "^11.10.5",
