@@ -96,7 +96,7 @@ const Main = () => {
         {/* 경력 */}
         <SectionLayout title="CAREER">
           {careers.map(career => (
-            <FlexBox alignItems="center" gap={20}>
+            <FlexBox key={career.id} alignItems="center" gap={20}>
               <ItemWrapper key={career.title}>
                 <Body4 moFontSize={14}>{career.title}</Body4>
                 <Caption2 _color={Colors.gray5f}>{career.date}</Caption2>
