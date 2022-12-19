@@ -1,9 +1,14 @@
+import React from "react";
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 import { AppLayout, SectionLayout } from "~/components/Layout";
 import { Recommendation } from "~/components/Main";
 import {
+  Body1,
   Body4,
+  Caption1,
   Caption2,
+  Caption3,
   Colors,
   EXTRA_BOLD_WEIGHT,
   FlexBox,
@@ -22,6 +27,7 @@ import {
   projects,
   skills
 } from "~/data";
+import { Button } from "~/components/Common";
 
 const Main = () => {
   return (
@@ -93,10 +99,19 @@ const Main = () => {
         {/* 경력 */}
         <SectionLayout title="CAREER">
           {careers.map(career => (
-            <ItemWrapper key={career.title}>
-              <Body4 moFontSize={14}>{career.title}</Body4>
-              <Caption2 _color={Colors.gray5f}>{career.date}</Caption2>
-            </ItemWrapper>
+            <FlexBox alignItems="center" gap={20}>
+              <ItemWrapper key={career.title}>
+                <Body4 moFontSize={14}>{career.title}</Body4>
+                <Caption2 _color={Colors.gray5f}>{career.date}</Caption2>
+              </ItemWrapper>
+              {career.works && (
+                <Link to={`/career/${career.id}`}>
+                  <Button>
+                    <Caption1 _color={Colors.gray5f}>자세히 보기</Caption1>
+                  </Button>
+                </Link>
+              )}
+            </FlexBox>
           ))}
         </SectionLayout>
         {/* 오픈소스 */}

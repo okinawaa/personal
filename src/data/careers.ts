@@ -1,4 +1,14 @@
-const careers = [
+interface Career {
+  id: string;
+  title: string;
+  date: string;
+  works?: {
+    title: string;
+    list: string[];
+  }[];
+}
+
+const careers: Career[] = [
   {
     id: "musinsa",
     title: "무신사(29CM) 프론트엔드 개발",
@@ -10,7 +20,7 @@ const careers = [
     date: "2022.03 - 2022.12.23",
     works: [
       {
-        title: "default-hooks(라이브러리) 제작 2022.07 - 2022.09",
+        title: "default-hooks(라이브러리) 제작",
         list: [
           "스토리북을 이용한 E2E 테스트 환경 구축",
           "Jenkins, Docker 를 활용한 npm 배포 파이프라인 구축",
@@ -18,10 +28,58 @@ const careers = [
         ]
       },
       {
+        title: "새서울자수 웹페이지 제작",
+        list: [
+          "next.js 를 활용한 SEO를 고려한 SSR 반응형 웹페이지 제작",
+          "next-18next 를 이용한 다국어 페이지 제작",
+          "Jenkins, Docker 를 활용한 CD 파이프라인 구축",
+          "프론트엔드 환경에서 REST API 서버와 소통",
+          "yarn berry 도입으로 인한 빌드시간 단축(zero-install)"
+        ]
+      },
+      {
+        title: "한국 야쿠르트 이벤트 페이지",
+        list: [
+          "react 를 활용한 반응형 웹페이지 제작",
+          "react 를 활용한 백오피스 웹사이트 제작",
+          "프론트엔드 환경에서 REST API 서버와 소통",
+          "Jenkins, Docker 를 활용한 CD 파이프라인 구축",
+          "yarn berry 도입으로 인한 빌드시간 단축(zero-install)",
+          "크로스브라우징 QA 진행"
+        ]
+      },
+      {
+        title: "보건복지부 노담 웹페이지 제작 및 유지보수",
+        list: [
+          "next.js 를 활용한 SEO를 고려한 SSR 반응형 웹페이지 제작",
+          "전 페이지 퍼블리싱 및 기능연동에 관여",
+          "react-query 도입을 통한 클라이언트 / 서버 상태의 분리",
+          "react 를 활용한 백오피스 웹사이트 제작​",
+          "Jenkins, Docker 를 활용한 CI/CD 파이프라인 구축",
+          "Jest를 활용한 단위 테스트 코드 작성",
+          "크로스브라우징 QA 진행"
+        ]
+      },
+      {
+        title: "랠리즈 웹페이지",
+        list: [
+          "react 를 활용한 반응형 웹페이지 제작",
+          "메인 페이지 전체 퍼블리싱 및 기능 구현",
+          "Ad Tracker 삽입",
+          "react 를 활용한 백오피스 웹사이트 제작​",
+          "크로스브라우징 QA 진행"
+        ]
+      },
+      {
+        title: "아이발달 모바일 애플리케이션(RN)",
+        list: ["온보딩 페이지 제작", "앱스토어 심사를 위한 회원 차단 기능 구현"]
+      },
+      {
         title: "프론트엔드 팀 문화 확립",
         list: [
           "프론트엔드 코딩 컨벤션 문화 확립",
-          "프론트엔드팀 코드 리뷰 문화 개선"
+          "프론트엔드팀 코드 리뷰 문화 개선",
+          "yarn berry, react-query, husky등 신기술 도입 및 팀원분들에게 정확한 당위성과 근거 설명"
         ]
       }
     ]
@@ -29,13 +87,24 @@ const careers = [
   {
     id: "parksystems",
     title: "파크시스템스 풀스택 웹개발 인턴",
-    date: "2022.01 - 2022.03"
+    date: "2022.01 - 2022.03",
+    works: [
+      {
+        title: "나노사이언티픽 심포지엄 사이트 구축",
+        list: [
+          "클라이언트(react) / 서버(express) / 데이터베이스(mysql) 환경 구축",
+          "글로벌 웹사이트 환경을 위한 다국어 웹사이트 제작",
+          "react 환경에서 SSR 구현",
+          "Jenkins 를 활용한 Continuous deployment 파이프라인 구축"
+        ]
+      }
+    ]
   },
   {
     id: "japan",
     title: "일본 워킹홀리데이",
     date: "2019.01 - 2020.01"
   }
-] as const;
+];
 
 export default careers;
