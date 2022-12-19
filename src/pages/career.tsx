@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { navigate, PageProps } from "gatsby";
 import { Back, More } from "~/assets/svgs";
-import { Button } from "~/components/Common";
+import { Button, Seo } from "~/components/Common";
 import { AppLayout, SectionLayout } from "~/components/Layout";
 import {
   Body1,
@@ -28,6 +28,11 @@ const Career = ({ pageContext }: PageProps<{}, PageContext>) => {
 
   return (
     <AppLayout isFooter={false}>
+      <Seo
+        description={`${career.title}에서의 기록`}
+        url={`https://chanhyuk.com/career/${career.id}`}
+        thumbnail={`https://chanhyuk.com/${career.id}.png`}
+      />
       <Body1 weight={BOLD_WEIGHT} moFontSize={20}>
         {career.title}에서의 기록
       </Body1>
