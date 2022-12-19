@@ -31,7 +31,7 @@ const Career = ({ pageContext }: PageProps<{}, PageContext>) => {
       <Seo
         description={`${career.title}에서의 기록`}
         url={`https://chanhyuk.com/career/${career.id}`}
-        thumbnail={`https://chanhyuk.com/${career.id}.png`}
+        thumbnail={`https://chanhyuk.com/career/${career.id}.png`}
       />
       <Body1 weight={BOLD_WEIGHT} moFontSize={20}>
         {career.title}에서의 기록
