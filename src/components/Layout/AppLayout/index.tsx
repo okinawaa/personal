@@ -1,12 +1,11 @@
-import React, { PropsWithChildren } from "react";
+import { motion } from "framer-motion";
+import { PropsWithChildren } from "react";
 import { Footer } from "~/components/Common";
-import { framerMocker, SizedBox } from "~/constants";
-import * as Styled from "./AppLayout.styles";
+import { defaultFadeInVariants, framerMocker, SizedBox } from "~/constants";
 import { GlobalCSS } from "~/styles";
-import { AnimatePresence, motion } from "framer-motion";
 import "~/styles/font-face.css";
+import * as Styled from "./AppLayout.styles";
 import AppLayoutProps from "./AppLayout.types";
-import { defaultFadeInVariants } from "~/constants";
 
 const AppLayout = ({
   children,

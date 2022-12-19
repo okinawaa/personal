@@ -4,6 +4,7 @@ import { FlexBox, media, pxToRem } from "~/constants";
 export const Container = styled(FlexBox)`
   width: ${pxToRem(850)};
   padding: ${pxToRem(100)} 0;
+  overflow-x: hidden;
 
   ${media.tablet} {
     width: ${pxToRem(350)};
