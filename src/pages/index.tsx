@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import { More } from "~/assets/svgs";
-import { Button } from "~/components/Common";
+import { Button, Seo } from "~/components/Common";
 import { AppLayout, SectionLayout } from "~/components/Layout";
 import { Recommendation } from "~/components/Main";
 import {
@@ -30,6 +30,7 @@ import {
 const Main = () => {
   return (
     <AppLayout>
+      <Seo/>
       <FlexBox _direction="column" alignItems="center" as="header">
         <Title2 weight={EXTRA_BOLD_WEIGHT} _color={Colors.black33} as="h1">
           ChanhyukPark-Tech

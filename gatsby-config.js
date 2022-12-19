@@ -9,13 +9,14 @@
  */
 
 const siteMetadata = {
-  title: `chanhyuk portfolio`,
+  title: `프론트엔드 엔지니어 박찬혁`,
   author: {
-    name: `Chanhyuk Park`,
+    name: `박찬혁`,
     summary: `웹 프론트엔드 개발자입니다. 코드 그 자체의 존재유무에 대하여 생각합니다.`
   },
   description: `제가 지닌 가치관과, 기록을 전달합니다.`,
-  siteUrl: `https://chanhyuk.com`
+  siteUrl: `https://chanhyuk.com`,
+  thumbnail: `https://chanhyuk.com/og.png`
 };
 
 module.exports = {
