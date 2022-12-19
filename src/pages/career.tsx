@@ -1,7 +1,17 @@
+import styled from "@emotion/styled";
 import { navigate, PageProps } from "gatsby";
+import { Back, More } from "~/assets/svgs";
 import { Button } from "~/components/Common";
 import { AppLayout, SectionLayout } from "~/components/Layout";
-import { Body1, BOLD_WEIGHT, Caption1, Colors, SizedBox } from "~/constants";
+import {
+  Body1,
+  BOLD_WEIGHT,
+  Caption1,
+  Colors,
+  FlexBox,
+  pxToRem,
+  SizedBox
+} from "~/constants";
 import { careers } from "~/data";
 
 type ElementType<T extends readonly unknown[]> = T[number];
@@ -33,7 +43,12 @@ const Career = ({ pageContext }: PageProps<{}, PageContext>) => {
         </SectionLayout>
       ))}
       <Button onClick={() => navigate(-1)} title="메인 페이지로 돌아가기">
-        <Caption1 _color={Colors.gray5f}>뒤로가기</Caption1>
+        <FlexBox alignItems="center">
+          <Back width={pxToRem(12)} height={pxToRem(12)} fill={Colors.gray5f} />
+
+          <SizedBox _width={4} />
+          <Caption1 _color={Colors.gray5f}>뒤로가기</Caption1>
+        </FlexBox>
       </Button>
     </AppLayout>
   );

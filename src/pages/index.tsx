@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
+import { More } from "~/assets/svgs";
 import { Button } from "~/components/Common";
 import { AppLayout, SectionLayout } from "~/components/Layout";
 import { Recommendation } from "~/components/Main";
@@ -104,7 +105,13 @@ const Main = () => {
               {career.works && (
                 <Link to={`/career/${career.id}`}>
                   <Button title={`${career.title}에 대한 상세한 기록 보기`}>
-                    <Caption1 _color={Colors.gray5f}>자세히 보기</Caption1>
+                    <Caption1 _color={Colors.gray5f}>자세히</Caption1>
+                    <SizedBox _width={4} />
+                    <More
+                      width={pxToRem(8)}
+                      height={pxToRem(12)}
+                      fill={Colors.gray5f}
+                    />
                   </Button>
                 </Link>
               )}

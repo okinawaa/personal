@@ -11,6 +11,7 @@
     "gatsby": "^5.3.2",
     "gatsby-plugin-emotion": "^8.3.0",
     "gatsby-plugin-image": "^3.3.2",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sharp": "^5.3.2",
     "gatsby-plugin-typescript": "^5.3.1",
     "gatsby-source-filesystem": "^5.3.1",
