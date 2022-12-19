@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import Colors from "~/constants/Colors";
 import { SizedBox } from "~/constants/Common.style";
 import { recommendations } from "~/data";
-import { Body2, Body4, Caption2 } from "~/constants/Typography";
+import { Body2, Body4, Caption1, Caption2 } from "~/constants/Typography";
 import { SectionLayout } from "~/components/Layout";
 import { chunkByLength } from "~/utils/common";
 import * as Styled from "./Recommendation.style";
@@ -21,13 +21,18 @@ const Recommendation = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Body2 _color={Colors.gray5f} moFontSize={14}>
+              <Body4 _color={Colors.gray5f} moFontSize={14}>
                 {recommendation.title}
-              </Body2>
+              </Body4>
             </a>
 
             <SizedBox _height={10} />
-            <Body4 as="p" moFontSize={14} whiteSpace="pre-wrap">
+            <Caption1
+              as="p"
+              moFontSize={12}
+              whiteSpace="pre-wrap"
+              lineHeight={16}
+            >
               {openRecommendations.includes(recommendation.title) ? (
                 recommendation.description
               ) : (
@@ -47,7 +52,7 @@ const Recommendation = () => {
                   </button>
                 </>
               )}
-            </Body4>
+            </Caption1>
           </Styled.ItemWrapper>
           <Styled.HorizontalLine />
         </Fragment>
