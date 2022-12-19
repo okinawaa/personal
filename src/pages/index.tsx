@@ -1,14 +1,12 @@
-import React from "react";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
+import { Button } from "~/components/Common";
 import { AppLayout, SectionLayout } from "~/components/Layout";
 import { Recommendation } from "~/components/Main";
 import {
-  Body1,
   Body4,
   Caption1,
   Caption2,
-  Caption3,
   Colors,
   EXTRA_BOLD_WEIGHT,
   FlexBox,
@@ -27,7 +25,6 @@ import {
   projects,
   skills
 } from "~/data";
-import { Button } from "~/components/Common";
 
 const Main = () => {
   return (
@@ -106,7 +103,7 @@ const Main = () => {
               </ItemWrapper>
               {career.works && (
                 <Link to={`/career/${career.id}`}>
-                  <Button>
+                  <Button title={`${career.title}에 대한 상세한 기록 보기`}>
                     <Caption1 _color={Colors.gray5f}>자세히 보기</Caption1>
                   </Button>
                 </Link>
