@@ -2,7 +2,7 @@
   "name": "chanhyuk-portfolio",
   "private": true,
   "description": "for me",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Chanhyuk <chanhyuk-tech@kakao.com>",
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -19,7 +19,8 @@
     "gatsby-transformer-sharp": "^5.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "svg-react-loader": "^0.4.6"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.6",
@@ -50,5 +51,6 @@
   },
   "bugs": {
     "url": "https://github.com/ChanhyukPark-Tech/portfolio/issues"
-  }
+  },
+  "packageManager": "yarn@3.3.0"
 }
