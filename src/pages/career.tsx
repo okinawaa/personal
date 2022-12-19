@@ -16,7 +16,7 @@ const Career = ({ pageContext }: PageProps<{}, PageContext>) => {
   if (!career) return <div>다시 시도해볼까요?</div>;
 
   return (
-    <AppLayout>
+    <AppLayout isFooter={false}>
       <Body1 weight={BOLD_WEIGHT} moFontSize={20}>
         {career.title}에서의 기록
       </Body1>
