@@ -8,7 +8,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const postResult = await graphql(
     `
       {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
           nodes {
             id
             fields {
@@ -21,11 +21,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   );
   const posts = postResult.data.allMarkdownRemark.nodes;
   if (posts.length > 0) {
-    posts.forEach((post) => {
+    posts.forEach(post => {
       createPage({
         path: post.fields.slug,
         component: Post,
-        context: { id: post.id },
+        context: { id: post.id }
       });
     });
   }
@@ -40,7 +40,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     });
   }
 };
@@ -49,8 +49,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, `src`),
-      },
-    },
+        "~": path.resolve(__dirname, `src`)
+      }
+    }
   });
 };

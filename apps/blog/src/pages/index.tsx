@@ -7,12 +7,14 @@ import "../styles/pages/index.scss";
 
 const Main = ({ data }: PageProps<QueryResult>) => {
   const posts = React.useMemo<Common.Post[]>(() => {
-    return data.allMarkdownRemark.nodes.map((node) => ({
+    return data.allMarkdownRemark.nodes.map(node => ({
       title: node.frontmatter.title,
       description: node.frontmatter.description,
-      thumbnail: node.frontmatter.thumbnail?.childImageSharp.gatsbyImageData.images.fallback ?? null,
+      thumbnail:
+        node.frontmatter.thumbnail?.childImageSharp.gatsbyImageData.images
+          .fallback ?? null,
       url: node.fields.slug,
-      publishedAt: node.frontmatter.date,
+      publishedAt: node.frontmatter.date
     }));
   }, [data]);
 
@@ -54,7 +56,7 @@ interface QueryResult {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         fields {
           slug

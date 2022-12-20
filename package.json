@@ -25,6 +25,8 @@
   "scripts": {
     "dev:port": "turbo run dev --filter portfolio",
     "dev:blog": "turbo run dev --filter blog",
+    "build:port": "turbo run build --filter portfolio",
+    "build:blog": "turbo run build --filter blog",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\""
   },
   "repository": {
