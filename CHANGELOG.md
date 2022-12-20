@@ -16,8 +16,15 @@
 
 - SSG dynamic route생성 (경력 상세)
 - 버튼 Common 컴포넌트 제작
+
 # 0.0.4
 
 - yarn berry 도입
-    - 유령 의존성 제거
-    - zero-install 지원
+  - 유령 의존성 제거
+  - zero-install 지원
+
+# 0.0.5
+
+- 모노레포 도입(turborepo)
+  - 포트폴리오
+  - 블로그

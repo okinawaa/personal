@@ -2,7 +2,7 @@
   "name": "chanhyuk",
   "private": true,
   "description": "for me",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Chanhyuk <chanhyuk-tech@kakao.com>",
   "workspaces": [
     "packages/*",
