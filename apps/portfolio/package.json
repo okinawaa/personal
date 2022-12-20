@@ -57,6 +57,5 @@
   },
   "bugs": {
     "url": "https://github.com/ChanhyukPark-Tech/portfolio/issues"
-  },
-  "packageManager": "yarn@3.3.0"
+  }
 }
