@@ -1,9 +1,9 @@
 interface Contact {
-  title:string;
-  link?:string
+  title: string;
+  link?: string;
 }
 
-const contacts:Contact[] = [
+const contacts: Contact[] = [
   {
     title: "github",
     link: "https://github.com/ChanhyukPark-Tech"
@@ -13,6 +13,10 @@ const contacts:Contact[] = [
   },
   {
     title: "chanhyuk-tech@kakao.com"
+  },
+  {
+    title: "블로그",
+    link: "https://blog.chanhyuk.com"
   }
 ];
 export default contacts;
