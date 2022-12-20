@@ -1,0 +1,62 @@
+{
+  "name": "@chanhyuk/portfolio",
+  "private": true,
+  "description": "for me",
+  "version": "0.0.4",
+  "author": "Chanhyuk <chanhyuk-tech@kakao.com>",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "framer-motion": "^7.10.2",
+    "gatsby": "^5.3.2",
+    "gatsby-plugin-emotion": "^8.3.0",
+    "gatsby-plugin-image": "^3.3.2",
+    "gatsby-plugin-react-helmet": "^6.3.0",
+    "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-sharp": "^5.3.2",
+    "gatsby-plugin-typescript": "^5.3.1",
+    "gatsby-source-filesystem": "^5.3.1",
+    "gatsby-transformer-sharp": "^5.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "svg-react-loader": "^0.4.6"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1",
+    "turbo": "^1.6.3",
+    "typescript": "^4.9.4",
+    "@chanhyuk/ts-config": "*"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChanhyukPark-Tech/portfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/ChanhyukPark-Tech/portfolio/issues"
+  },
+  "packageManager": "yarn@3.3.0"
+}

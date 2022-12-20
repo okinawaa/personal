@@ -1,0 +1,2 @@
+- developed by Gatsby, deployed by Vercel
+- inspired by [hoseung.me](https://blog.hoseung.me/)

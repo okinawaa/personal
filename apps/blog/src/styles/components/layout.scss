@@ -1,0 +1,66 @@
+.layout-wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+
+  > * {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  > header {
+    position: sticky;
+    top: 0;
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background-color: var(--white0);
+    transition: background-color 0.4s, box-shadow 0.4s;
+
+    @media screen and (min-width: 800px) {
+      top: 0.5rem;
+      border-radius: 20px;
+    }
+
+    &.scrolled {
+      background-color: var(--white0_t70);
+      box-shadow: 0 1px 15px var(--grey3);
+    }
+
+    > .link-to-home {
+      margin-right: auto;
+      color: var(--grey0);
+      font-size: 1.6rem;
+      font-weight: 700;
+      transition: color 0.15s;
+
+      &:hover {
+        color: var(--grey1);
+      }
+    }
+
+    > .link-to-about {
+      margin-right: 1rem;
+      color: var(--grey0);
+      font-size: 0.9rem;
+      font-weight: 400;
+      transition: color 0.15s;
+
+      &:hover {
+        color: var(--grey1);
+      }
+    }
+  }
+
+  > footer {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+
+    > a {
+      font-weight: 700;
+    }
+  }
+}

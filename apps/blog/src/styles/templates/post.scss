@@ -1,0 +1,63 @@
+.blog-post-wrapper {
+  width: 100%;
+
+  > header {
+    width: 100%;
+    margin-bottom: 2.4rem;
+
+    > .title {
+      margin-bottom: 0.8rem;
+      font-size: 2rem;
+    }
+
+    > .published-at {
+      margin-bottom: 0.8rem;
+      color: var(--grey0);
+      font-size: 0.9rem;
+    }
+
+    > .thumbnail {
+      width: 100%;
+      border: 1px solid var(--grey5);
+      border-radius: 12px;
+    }
+  }
+
+  > section {
+    font-size: 16px;
+    line-height: 24px;
+
+    ul,
+    ol {
+      margin: 0.5rem 0;
+      padding-left: 1.6rem;
+    }
+
+    li {
+      margin: 0.3rem 0;
+    }
+
+    a {
+      color: var(--green0);
+      font-weight: 700;
+      transition: color 0.2s;
+
+      @media screen and (min-width: 800px) {
+        &:hover {
+          color: var(--green1);
+        }
+      }
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 0.1rem 1.5rem;
+      border-radius: 10px;
+      background-color: var(--grey4);
+    }
+
+    pre {
+      border-radius: 10px;
+    }
+  }
+}
