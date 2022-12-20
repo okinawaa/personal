@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Chanhyuk Park <chanhyuk-tech@kakao.com>",
   "bugs": {
-    "url": "https://github.com/ChanhyukPark-Tech/blog/issues"
+    "url": "https://github.com/ChanhyukPark-Tech/portfolio/issues"
   },
   "dependencies": {
     "gatsby": "^5.3.2",
