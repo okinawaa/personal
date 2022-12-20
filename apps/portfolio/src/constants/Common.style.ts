@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { CSSProperties } from "react";
+import type { CSSProperties } from "react";
 import { media } from "./Media";
 import { pxToRem } from "./Size";
 

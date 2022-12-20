@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import { navigate, PageProps } from "gatsby";
-import { Back, More } from "~/assets/svgs";
+import type { PageProps } from "gatsby";
+import { navigate } from "gatsby";
+import { Back } from "~/assets/svgs";
 import { Button, Seo } from "~/components/Common";
 import { AppLayout, SectionLayout } from "~/components/Layout";
 import {
