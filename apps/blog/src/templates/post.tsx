@@ -1,5 +1,6 @@
 import React from "react";
-import { graphql, PageProps } from "gatsby";
+import type { PageProps } from "gatsby";
+import { graphql } from "gatsby";
 
 import { Seo, Utterances } from "~/components/Common";
 import { AppLayout } from "~/components/Layout";
@@ -7,7 +8,8 @@ import "../styles/templates/post.scss";
 
 export default function ({ data }: PageProps<QueryResult>) {
   const post = data.markdownRemark;
-  const thumbnail = post.frontmatter.thumbnail?.childImageSharp.gatsbyImageData.images.fallback;
+  const thumbnail =
+    post.frontmatter.thumbnail?.childImageSharp.gatsbyImageData.images.fallback;
 
   return (
     <AppLayout>
@@ -16,10 +18,16 @@ export default function ({ data }: PageProps<QueryResult>) {
         description={post.frontmatter.description}
         url={`https://blog.chanhyuk.com${post.fields.slug}`}
         thumbnail={
-          post.frontmatter.thumbnail ? `https://blog.chanhyuk.com${post.frontmatter.thumbnail.publicURL}` : undefined
+          post.frontmatter.thumbnail
+            ? `https://blog.chanhyuk.com${post.frontmatter.thumbnail.publicURL}`
+            : undefined
         }
       />
-      <article className="blog-post-wrapper" itemScope itemType="http://schema.org/Article">
+      <article
+        className="blog-post-wrapper"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
         <header>
           <h1 className="title" itemProp="headline">
             {post.frontmatter.title}
@@ -27,10 +35,19 @@ export default function ({ data }: PageProps<QueryResult>) {
           <p className="published-at">{post.frontmatter.date}</p>
 
           {thumbnail && (
-            <img className="thumbnail" src={thumbnail.src} srcSet={thumbnail.srcSet} sizes={thumbnail.sizes} />
+            <img
+              className="thumbnail"
+              alt=""
+              src={thumbnail.src}
+              srcSet={thumbnail.srcSet}
+              sizes={thumbnail.sizes}
+            />
           )}
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
+        <section
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          itemProp="articleBody"
+        />
         <Utterances />
       </article>
     </AppLayout>

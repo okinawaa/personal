@@ -1,6 +1,10 @@
 .blog-post-wrapper {
   width: 100%;
 
+  .gatsby-resp-image-image {
+    border-radius: 6px;
+  }
+
   > header {
     width: 100%;
     margin-bottom: 2.4rem;
