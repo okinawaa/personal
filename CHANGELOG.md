@@ -19,7 +19,7 @@
 
 # 0.0.4
 
-- yarn berry 도입
+- yarn berry 도입 (Pnp 이슈로 인해 보류)
   - 유령 의존성 제거
   - zero-install 지원
 
@@ -29,4 +29,4 @@
   - 포트폴리오
   - 블로그
 
-t
+
