@@ -1,25 +1,29 @@
 import React from "react";
 import type { PageProps } from "gatsby";
 import { graphql } from "gatsby";
-
 import { Seo, Utterances } from "~/components/Common";
 import { AppLayout } from "~/components/Layout";
 import "../styles/templates/post.scss";
 
-export default function ({ data }: PageProps<QueryResult>) {
-  const post = data.markdownRemark;
-  const thumbnail =
-    post.frontmatter.thumbnail?.childImageSharp.gatsbyImageData.images.fallback;
+const Post = ({ data }: PageProps<QueryResult>) => {
+  const {
+    html,
+    fields,
+    frontmatter: { date, description, thumbnail, title }
+  } = data.markdownRemark;
+  
+  const fallbackThumbnail =
+    thumbnail?.childImageSharp.gatsbyImageData.images.fallback;
 
   return (
     <AppLayout>
       <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        url={`https://blog.chanhyuk.com${post.fields.slug}`}
+        title={title}
+        description={description}
+        url={`https://blog.chanhyuk.com${fields.slug}`}
         thumbnail={
-          post.frontmatter.thumbnail
-            ? `https://blog.chanhyuk.com${post.frontmatter.thumbnail.publicURL}`
+          thumbnail
+            ? `https://blog.chanhyuk.com${thumbnail.publicURL}`
             : undefined
         }
       />
@@ -30,29 +34,23 @@ export default function ({ data }: PageProps<QueryResult>) {
       >
         <header>
           <h1 className="title" itemProp="headline">
-            {post.frontmatter.title}
+            {title}
           </h1>
-          <p className="published-at">{post.frontmatter.date}</p>
+          <p className="published-at">{date}</p>
 
           {thumbnail && (
-            <img
-              className="thumbnail"
-              alt=""
-              src={thumbnail.src}
-              srcSet={thumbnail.srcSet}
-              sizes={thumbnail.sizes}
-            />
+            <img className="thumbnail" alt="" {...fallbackThumbnail} />
           )}
         </header>
         <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: html }}
           itemProp="articleBody"
         />
         <Utterances />
       </article>
     </AppLayout>
   );
-}
+};
 
 interface QueryResult {
   markdownRemark: {
@@ -103,3 +101,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default Post;
