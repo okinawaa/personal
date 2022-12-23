@@ -1,22 +1,26 @@
 import React from "react";
-import { graphql, PageProps } from "gatsby";
+import type { PageProps } from "gatsby";
+import { graphql } from "gatsby";
 import { AppLayout } from "~/components/Layout";
 import { PostList } from "~/components/Main";
 import { Seo } from "~/components/Common";
 import "../styles/pages/index.scss";
 
 const Main = ({ data }: PageProps<QueryResult>) => {
-  const posts = React.useMemo<Common.Post[]>(() => {
-    return data.allMarkdownRemark.nodes.map(node => ({
-      title: node.frontmatter.title,
-      description: node.frontmatter.description,
-      thumbnail:
-        node.frontmatter.thumbnail?.childImageSharp.gatsbyImageData.images
-          .fallback ?? null,
-      url: node.fields.slug,
-      publishedAt: node.frontmatter.date
-    }));
-  }, [data]);
+  const posts = React.useMemo<Common.Post[]>(
+    () =>
+      data.allMarkdownRemark.nodes.map(
+        ({ frontmatter: { title, description, thumbnail, date }, fields }) => ({
+          title,
+          description,
+          thumbnail:
+            thumbnail?.childImageSharp.gatsbyImageData.images.fallback ?? null,
+          url: fields.slug,
+          publishedAt: date
+        })
+      ),
+    [data]
+  );
 
   return (
     <AppLayout>
