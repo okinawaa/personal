@@ -1,5 +1,10 @@
 const projects= [
   {
+    title: "짤툰대난투 웹페이지",
+    date: "2022. 12",
+    link: "https://jjaltoonrumble.bigpicture-games.com/ko-KR/home"
+  },
+  {
     title: "새서울자수 웹페이지",
     date: "2022. 09",
     link: "https://ssemb.co.kr/home"
