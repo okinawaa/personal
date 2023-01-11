@@ -1,4 +1,4 @@
-const openSources= [
+const openSources = [
   {
     title: "toss/slash",
     link: "https://github.com/toss/slash/issues?q=involves%3AChanhyukPark-Tech"
@@ -8,8 +8,8 @@ const openSources= [
     link: "https://github.com/ngneat/falso/issues?q=involves%3AChanhyukPark-Tech"
   },
   {
-    title: "naver/fe-news",
-    link: "https://github.com/naver/fe-news/pull/22"
+    title: "nextauthjs/next-auth",
+    link: "https://github.com/nextauthjs/next-auth/issues?q=involves%3AChanhyukPark-Tech"
   },
   {
     title: "carbon/carbon-design-system",
