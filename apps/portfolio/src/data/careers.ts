@@ -12,13 +12,37 @@ const careers: Career[] = [
   {
     id: "musinsa",
     title: "무신사(29CM) 프론트엔드 개발",
-    date: "2023.01 - "
+    date: "2023.01 - ",
+    works: [
+      {
+        title: "프론트엔드 플랫폼팀 프론트엔드팀 생산성 향상",
+        list: [
+          "storybook PR preview 개발환경 구축",
+          "github cloud runner를 self-hosted runner로 migration"
+        ]
+      },
+      {
+        title: "29CM 신규 어드민 시스템 프론트엔드 개발",
+        list: [
+          "디자인 시스템에 DRI를 갖고 개발 및 유지보수",
+          "스태프 및 파트너 정산 시스템 프론트엔드 구축"
+        ]
+      }
+    ]
   },
   {
     id: "bigpicture",
     title: "빅픽처팀 프론트엔드 개발",
     date: "2022.03 - 2022.12.23",
     works: [
+      {
+        title: "몰라몰라 개복치 서비스 및 관리자 페이지 제작",
+        list: [
+          "소셜로그인 카카오톡 및 구글 로그인 구현",
+          "회원가입 플로우 구현",
+          "짤뽑기 컨텐츠 프론트엔드 작업"
+        ]
+      },
       {
         title: "짤툰대난투 소개페이지 및 관리자 페이지 제작",
         list: [

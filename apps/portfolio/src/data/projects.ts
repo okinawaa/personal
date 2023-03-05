@@ -1,4 +1,9 @@
-const projects= [
+const projects = [
+  {
+    title: "몰라몰라개복치",
+    date: "2022. 12",
+    link: "http://mola.bigpicture.team/"
+  },
   {
     title: "짤툰대난투 웹페이지",
     date: "2022. 12",
