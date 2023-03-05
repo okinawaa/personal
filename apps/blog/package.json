@@ -41,7 +41,6 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
-    "@chanhyuk/ts-config": "*",
     "@types/react-helmet": "^6.1.5",
     "prettier": "^2.5.1",
     "typescript": "^4.9.4"
