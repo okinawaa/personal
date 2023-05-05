@@ -1,5 +1,15 @@
 const projects = [
   {
+    title: "29CM 커넥트(어드민) 프론트엔드 개발",
+    date: "2023. 1 ~",
+    link: "https://partner-connect.29cm.co.kr/"
+  },
+  {
+    title: "29CM 서비스 프론트엔드 개발",
+    date: "2023. 1 ~",
+    link: "https://www.29cm.co.kr/"
+  },
+  {
     title: "몰라몰라개복치",
     date: "2022. 12",
     link: "http://mola.bigpicture.team/"
