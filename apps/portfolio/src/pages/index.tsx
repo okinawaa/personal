@@ -12,10 +12,10 @@ import {
   EXTRA_BOLD_WEIGHT,
   FlexBox,
   LIGHT_WEIGHT,
-  media,
-  pxToRem,
   SizedBox,
-  Title2
+  Title2,
+  media,
+  pxToRem
 } from "~/constants";
 import {
   careers,
@@ -23,7 +23,6 @@ import {
   educations,
   info,
   openSources,
-  projects,
   skills
 } from "~/data";
 
@@ -78,22 +77,7 @@ const Main = () => {
             ))}
           </SkillWrapper>
         </SectionLayout>
-        {/* 프로젝트 */}
-        <SectionLayout title="PROJECT">
-          {projects.map(project => (
-            <ItemWrapper key={project.title}>
-              <a
-                href={project.link}
-                title={`${project.title} 프로젝트 보러가기`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Body4 moFontSize={14}>{project.title}</Body4>
-              </a>
-              <Caption2 _color={Colors.gray5f}>{project.date}</Caption2>
-            </ItemWrapper>
-          ))}
-        </SectionLayout>
+        
 
         {/* 경력 */}
         <SectionLayout title="CAREER">

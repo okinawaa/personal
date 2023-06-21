@@ -1,4 +1,3 @@
-import projects from "./projects";
 import openSources from "./openSources";
 import contacts from "./contacts";
 import recommendations from "./recommendations";
@@ -8,7 +7,6 @@ import educations from "./educations";
 import skills from "./skills";
 
 export {
-  projects,
   openSources,
   contacts,
   recommendations,
