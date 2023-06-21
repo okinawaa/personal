@@ -10,9 +10,22 @@ interface Career {
 
 const careers: Career[] = [
   {
+    id: "tosspayments",
+    title: "토스페이먼츠 프론트엔드 개발",
+    date: "2023.06 - ",
+    works: [
+      {
+        title: "상점계약 Division",
+        list: [
+          "상점계약 PS팀",
+        ]
+      },
+    ]
+  },
+  {
     id: "musinsa",
     title: "무신사(29CM) 프론트엔드 개발",
-    date: "2023.01 - ",
+    date: "2023.01 - 2023.06",
     works: [
       {
         title: "29CM 서비스 프론트엔드 개발",
@@ -25,7 +38,8 @@ const careers: Career[] = [
         title: "프론트엔드 플랫폼팀 프론트엔드팀 생산성 향상",
         list: [
           "storybook PR preview 개발환경 구축",
-          "github cloud runner를 self-hosted runner로 migration"
+          "github cloud runner를 self-hosted runner로 migration",
+          "Design System(ruler) token 정의 및 모노레포 환경 구축"
         ]
       },
       {
