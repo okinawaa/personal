@@ -9,9 +9,6 @@ const contacts: Contact[] = [
     link: "https://github.com/ChanhyukPark-Tech"
   },
   {
-    title: "010-3492-8993"
-  },
-  {
     title: "chanhyuk-tech@kakao.com"
   },
   {
