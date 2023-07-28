@@ -23,7 +23,7 @@ const AppLayout = ({ children }: PropsWithChildren) => {
         </header>
         <main>{children}</main>
         <footer>
-          ©<a href="https://github.com/ChanhyukPark-Tech">Chanhyuk</a>, Built with
+          ©<a href="https://github.com/okinawaa">Chanhyuk</a>, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>

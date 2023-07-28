@@ -7,7 +7,7 @@ export default function () {
     const element = document.createElement("script");
 
     element.setAttribute("src", "https://utteranc.es/client.js");
-    element.setAttribute("repo", "ChanhyukPark-Tech/personal");
+    element.setAttribute("repo", "okinawaa/personal");
     element.setAttribute("issue-term", "pathname");
     element.setAttribute("label", "comment");
     element.setAttribute("theme", "github-light");

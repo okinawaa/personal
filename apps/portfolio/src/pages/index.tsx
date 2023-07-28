@@ -32,7 +32,7 @@ const Main = () => {
       <Seo/>
       <FlexBox _direction="column" alignItems="center" as="header">
         <Title2 weight={EXTRA_BOLD_WEIGHT} _color={Colors.black33} as="h1">
-          ChanhyukPark-Tech
+          okinawaa
         </Title2>
         <SizedBox _height={20} />
         <Title2 weight={EXTRA_BOLD_WEIGHT} _color={Colors.black} as="h2">
