@@ -6,7 +6,7 @@ interface Contact {
 const contacts: Contact[] = [
   {
     title: "github",
-    link: "https://github.com/ChanhyukPark-Tech"
+    link: "https://github.com/okinawaa"
   },
   {
     title: "chanhyuk-tech@kakao.com"
