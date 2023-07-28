@@ -12,12 +12,12 @@ const AppLayout = ({ children }: PropsWithChildren) => {
       <div className="layout-wrapper">
         <header className={!isScrollTop ? "scrolled" : undefined}>
           <Link className="link-to-home" to="/">
-            ChanhyukPark-Tech
+            okinawaa
           </Link>
           <a className="link-to-about" href="https://chanhyuk.com">
             RESUME
           </a>
-          <a className="link-to-about" href="https://github.com/ChanhyukPark-Tech">
+          <a className="link-to-about" href="https://github.com/okinawaa">
             GITHUB
           </a>
         </header>
