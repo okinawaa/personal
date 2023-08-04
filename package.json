@@ -44,5 +44,6 @@
   },
   "bugs": {
     "url": "https://github.com/okinawaa/personal/issues"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }
