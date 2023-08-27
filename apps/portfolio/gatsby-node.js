@@ -10,7 +10,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
-const careerIds = ["musinsa", "bigpicture", "parksystems", "japan"];
+const careerIds = ["tosspayments","musinsa", "bigpicture", "parksystems", "japan"];
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions;
