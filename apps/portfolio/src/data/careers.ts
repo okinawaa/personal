@@ -15,11 +15,13 @@ const careers: Career[] = [
     date: "2023.06 - ",
     works: [
       {
-        title: "상점계약 Division",
-        list: [
-          "상점계약 PS팀",
-        ]
+        title: "상점계약 Division(상점계약 PS팀)",
+        list: ["PG KYC(Know Your Customer)재이행 프로젝트 프론트엔드 구축"]
       },
+      {
+        title: "토스커뮤니티",
+        list: ["open source slash's maintainer"]
+      }
     ]
   },
   {
