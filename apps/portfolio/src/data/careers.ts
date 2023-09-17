@@ -15,8 +15,15 @@ const careers: Career[] = [
     date: "2023.06 - ",
     works: [
       {
+        title: "퀵계좌결제 사일로",
+        list: ["가장 쉽고 부담없는 계좌이체 결제"]
+      },
+      {
         title: "상점계약 Division(상점계약 PS팀)",
-        list: ["PG KYC(Know Your Customer)재이행 프로젝트 프론트엔드 구축"]
+        list: [
+          "PG KYC(Know Your Customer)재이행 프로젝트 프론트엔드 구축.",
+          "고객 데이터 클렌징으로 리스크 운영모델 구축 고도화"
+        ]
       },
       {
         title: "토스커뮤니티",
