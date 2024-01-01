@@ -1,5 +1,5 @@
 ---
-title: "2023년 년기"
+title: "2023년 연기"
 date: 2024-01-01
 description: "일기가 아닌 연기"
 thumbnail: ./thumbnail.png
